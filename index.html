@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Campus Library Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Campus Library</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="user.html">Student</a>
+        <a href="admin.html">Admin</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <h1>Library management for students and campus staff</h1>
+          <p>Search books, manage borrowing, check fines, and keep material organized by year and semester.</p>
+          <div class="hero-actions">
+            <a class="btn" href="user.html">Student Dashboard</a>
+            <a class="btn btn-secondary" href="admin.html">Admin Dashboard</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Quick search</h2>
+          <p>Type a book title, author, semester, or year to find resources immediately.</p>
+          <div class="search-box">
+            <input id="searchInput" type="search" placeholder="Search books by title or author" />
+            <button id="searchButton">Search</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features container">
+      <div class="feature-card">
+        <h3>Catalog</h3>
+        <p>Filter books by title, author, course, year, and semester.</p>
+      </div>
+      <div class="feature-card">
+        <h3>User accounts</h3>
+        <p>Student login, registration, borrow history, fine tracking, and profile management.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Admin dashboard</h3>
+        <p>Add, update, delete books, issue and return items, and manage inventory with ease.</p>
+      </div>
+    </section>
+
+    <section class="catalog container">
+      <div class="section-header">
+        <h2>Library Collection</h2>
+        <p>Browse the latest books, textbooks, and semester material.</p>
+      </div>
+      <div class="catalog-actions">
+        <label>
+          Filter by year:
+          <select id="yearFilter">
+            <option value="all">All</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="2022">2022</option>
+            <option value="2021">2021</option>
+          </select>
+        </label>
+        <label>
+          Semester:
+          <select id="semesterFilter">
+            <option value="all">All</option>
+            <option value="Spring">Spring</option>
+            <option value="Summer">Summer</option>
+            <option value="Fall">Fall</option>
+          </select>
+        </label>
+      </div>
+      <div id="bookList" class="book-grid"></div>
+      <div id="noResults" class="empty-state hidden">No books match your search. Try another keyword.</div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <div class="section-header">
+        <h2>Contact the library</h2>
+        <p>Send a message for support, lost book requests, or material updates.</p>
+      </div>
+      <form class="contact-form">
+        <div class="form-row">
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Your name" />
+        </div>
+        <div class="form-row">
+          <label for="email">Email</label>
+          <input id="email" type="email" placeholder="Your email" />
+        </div>
+        <div class="form-row">
+          <label for="message">Message</label>
+          <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+        </div>
+        <button type="button" class="btn" onclick="submitContact()">Send message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>Campus Library Portal &copy; 2026</p>
+      <p>Designed for librarians, students, and campus managers.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

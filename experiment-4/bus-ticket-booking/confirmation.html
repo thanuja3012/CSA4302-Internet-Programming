@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Confirmation - Bus Ticket Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-bus-front-fill"></i> Bus Ticket Booking</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="buses.html">Search Buses</a></li>
+          <li class="nav-item"><a class="nav-link" href="my-bookings.html">My Bookings</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card card-shadow p-5 text-center">
+          <span class="badge bg-success mb-3">Booking Confirmed</span>
+          <h1 class="display-6 mb-3">Booking Confirmed!</h1>
+          <p class="lead text-muted mb-4">Your itinerary is confirmed. Booking details are shown below and a confirmation email has been simulated.</p>
+          <div id="confirmationDetails"></div>
+          <div class="d-flex justify-content-center gap-3 mt-4 flex-wrap">
+            <button id="printTicket" class="btn btn-outline-primary"><i class="bi bi-printer"></i> Print Ticket</button>
+            <button id="downloadTicket" class="btn btn-primary"><i class="bi bi-download"></i> Download Ticket</button>
+            <a href="my-bookings.html" class="btn btn-success"><i class="bi bi-card-list"></i> Go to My Bookings</a>
+          </div>
+          <p class="text-muted mt-4">Booking confirmation has been sent to your registered email address.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sticky-footer py-4">
+    <div class="container text-center text-white">
+      <p class="mb-0">Thank you for booking with our demo bus ticket system.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/confirmation.js"></script>
+</body>
+</html>

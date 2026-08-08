@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comments - Bus Ticket Booking</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" href="index.html"><i class="bi bi-bus-front-fill"></i> Bus Ticket Booking</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="buses.html">Search Buses</a></li>
+          <li class="nav-item"><a class="nav-link" href="my-bookings.html">My Bookings</a></li>
+          <li class="nav-item"><a class="nav-link active" href="comments.html">Comments</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container py-5">
+    <div class="row mb-4">
+      <div class="col-lg-8">
+        <h2 class="section-title">Bus Reviews & Comments</h2>
+        <p class="text-muted">Share your experience and view feedback from other travelers.</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-lg-5">
+        <div class="card card-shadow p-4">
+          <h5 class="mb-3">Post a Comment</h5>
+          <div id="commentMessage"></div>
+          <form id="commentForm" novalidate>
+            <div class="mb-3">
+              <label class="form-label">Select Bus</label>
+              <select id="commentBus" class="form-select" required></select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Rating</label>
+              <select id="commentRating" class="form-select" required>
+                <option value="">Choose rating</option>
+                <option>5</option>
+                <option>4</option>
+                <option>3</option>
+                <option>2</option>
+                <option>1</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Comment</label>
+              <textarea id="commentText" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Submit Comment</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div id="commentList"></div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="sticky-footer py-4">
+    <div class="container text-center text-white">
+      <p class="mb-0">All comments are stored locally for the demonstration project.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/comments.js"></script>
+</body>
+</html>

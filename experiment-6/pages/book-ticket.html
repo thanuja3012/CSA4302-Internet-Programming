@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Ticket | SkyLink Airlines</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="container page-shell">
+      <a class="brand" href="../index.html">← Back to Home</a>
+      <section class="panel">
+        <h1>Book Ticket</h1>
+        <p>Select a flight, choose a seat, and enter passenger details.</p>
+        <form>
+          <div class="form-grid">
+            <label>
+              Selected Flight
+              <input type="text" value="SL 401 - Delhi to Mumbai" required />
+            </label>
+            <label>
+              Seat Preference
+              <select>
+                <option>Window</option>
+                <option>Aisle</option>
+                <option>Middle</option>
+              </select>
+            </label>
+            <label>
+              Passenger Name
+              <input type="text" placeholder="Aarav Sharma" required />
+            </label>
+            <label>
+              Contact Number
+              <input type="tel" placeholder="9876543210" required />
+            </label>
+            <label>
+              Email
+              <input type="email" placeholder="passenger@example.com" required />
+            </label>
+            <label>
+              ID Proof
+              <input type="text" placeholder="Aadhaar / Passport" required />
+            </label>
+          </div>
+          <div class="inline-row" style="margin-top: 1rem;">
+            <button type="submit">Continue to Payment</button>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

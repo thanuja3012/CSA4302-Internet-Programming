@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ticket Payment | SkyLink Airlines</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <div class="container page-shell">
+      <a class="brand" href="../index.html">← Back to Home</a>
+      <section class="panel">
+        <h1>Ticket Payment</h1>
+        <p>Complete your payment securely using the integrated payment gateway.</p>
+        <form>
+          <div class="form-grid">
+            <label>
+              Cardholder Name
+              <input type="text" placeholder="Aarav Sharma" required />
+            </label>
+            <label>
+              Card Number
+              <input type="text" placeholder="4242 4242 4242 4242" required />
+            </label>
+            <label>
+              Expiry Date
+              <input type="text" placeholder="MM/YY" required />
+            </label>
+            <label>
+              CVV
+              <input type="password" placeholder="123" required />
+            </label>
+          </div>
+          <div class="inline-row" style="margin-top: 1rem;">
+            <button type="submit">Pay Now</button>
+            <a class="btn btn-secondary" href="my-ticket.html" style="color: white;">View My Ticket</a>
+          </div>
+        </form>
+      </section>
+    </div>
+    <script src="../script.js"></script>
+  </body>
+</html>

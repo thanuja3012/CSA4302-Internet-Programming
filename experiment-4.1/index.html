@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Railway Reservation System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Railway Reservation System</div>
+    <nav>
+      <button data-section="home" class="nav-btn active">Home</button>
+      <button data-section="search" class="nav-btn">Search & Book</button>
+      <button data-section="pnr" class="nav-btn">PNR Status</button>
+      <button data-section="dashboard" class="nav-btn">Dashboard</button>
+      <button data-section="admin" class="nav-btn">Admin</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section id="home" class="panel active-panel">
+      <div class="hero">
+        <h1>Book trains, manage reservations, and view seat availability in real time.</h1>
+        <p>Secure login, responsive dashboard, PNR status lookup, ticket printing, and admin schedule control.</p>
+      </div>
+      <div class="card-grid">
+        <article class="card">
+          <h2>Passenger Access</h2>
+          <p>Login or register to search trains, choose seats, pay securely, and manage your booking history.</p>
+        </article>
+        <article class="card">
+          <h2>Real-time Availability</h2>
+          <p>Search by route, date, and class. See up-to-date seat availability and pricing immediately.</p>
+        </article>
+        <article class="card">
+          <h2>Admin Panel</h2>
+          <p>Admins can control schedules, seat inventory, fare rules, and refund policies all in one place.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="search" class="panel">
+      <div class="auth-box">
+        <div>
+          <h2>Login</h2>
+          <form id="loginForm" class="form-grid">
+            <label for="loginEmail">Email</label>
+            <input id="loginEmail" type="email" placeholder="email@example.com" required />
+            <label for="loginPassword">Password</label>
+            <input id="loginPassword" type="password" placeholder="Password" required />
+            <button type="submit" class="primary-btn">Sign In</button>
+          </form>
+        </div>
+        <div>
+          <h2>Register</h2>
+          <form id="registerForm" class="form-grid">
+            <label for="registerName">Name</label>
+            <input id="registerName" type="text" placeholder="Full Name" required />
+            <label for="registerEmail">Email</label>
+            <input id="registerEmail" type="email" placeholder="email@example.com" required />
+            <label for="registerPassword">Password</label>
+            <input id="registerPassword" type="password" placeholder="Password" required />
+            <button type="submit" class="secondary-btn">Create Account</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="booking-panel">
+        <h2>Search Trains</h2>
+        <form id="searchForm" class="form-grid">
+          <label for="origin">Origin Station</label>
+          <input id="origin" type="text" placeholder="From" required />
+          <label for="destination">Destination Station</label>
+          <input id="destination" type="text" placeholder="To" required />
+          <label for="travelDate">Journey Date</label>
+          <input id="travelDate" type="date" required />
+          <label for="classType">Class</label>
+          <select id="classType" required>
+            <option value="Sleeper">Sleeper</option>
+            <option value="AC 3 Tier">AC 3 Tier</option>
+            <option value="AC 2 Tier">AC 2 Tier</option>
+            <option value="First Class">First Class</option>
+          </select>
+          <button type="submit" class="primary-btn">Search Now</button>
+        </form>
+        <div id="searchResults" class="train-list"></div>
+      </div>
+    </section>
+
+    <section id="pnr" class="panel">
+      <h2>PNR Status Check</h2>
+      <form id="pnrForm" class="form-grid pnr-form">
+        <label for="pnrNumber">Enter PNR Number</label>
+        <input id="pnrNumber" type="text" placeholder="PNR1234567" required />
+        <button type="submit" class="primary-btn">Check Status</button>
+      </form>
+      <div id="pnrStatus" class="status-card">Enter a valid PNR to view reservation details.</div>
+    </section>
+
+    <section id="dashboard" class="panel">
+      <div class="panel-header">
+        <h2>Passenger Dashboard</h2>
+        <button id="logoutBtn" class="secondary-btn">Logout</button>
+      </div>
+      <div class="dashboard-grid">
+        <article class="dashboard-card">
+          <h3>Welcome, <span id="dashboardName">Guest</span></h3>
+          <p>Status: <strong id="dashboardStatus">Not signed in</strong></p>
+          <p>Booking history and ticket details appear here after login.</p>
+        </article>
+        <article class="dashboard-card">
+          <h3>Recent Bookings</h3>
+          <div id="bookingHistory" class="bookings-list">No booking history yet.</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="admin" class="panel">
+      <h2>Admin Control Panel</h2>
+      <div class="admin-grid">
+        <article class="admin-card">
+          <h3>Manage Trains</h3>
+          <form id="trainForm" class="form-grid">
+            <label for="adminTrainName">Train Name</label>
+            <input id="adminTrainName" type="text" placeholder="Train Name" required />
+            <label for="adminTrainRoute">Route</label>
+            <input id="adminTrainRoute" type="text" placeholder="Origin - Destination" required />
+            <label for="adminTrainDate">Date</label>
+            <input id="adminTrainDate" type="date" required />
+            <label for="adminSeats">Available Seats</label>
+            <input id="adminSeats" type="number" min="0" value="100" required />
+            <button type="submit" class="primary-btn">Add / Update Train</button>
+          </form>
+        </article>
+        <article class="admin-card">
+          <h3>Refund Rules</h3>
+          <div class="refund-info">
+            <p>Date-based refund rules help calculate the refund amount after cancellation.</p>
+            <ul>
+              <li>More than 7 days before journey: 90%</li>
+              <li>3-7 days before journey: 50%</li>
+              <li>Less than 3 days: 25%</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <div id="adminTrains" class="train-list"></div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast hidden"></div>
+  <script src="script.js"></script>
+</body>
+</html>

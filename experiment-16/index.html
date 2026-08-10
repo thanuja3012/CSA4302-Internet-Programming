@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ComplainEase | Grievance Portal</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <span class="brand-icon">CE</span>
+        <span>ComplainEase</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#services">Services</a>
+        <a href="#process">Complaint Flow</a>
+        <a href="#roles">Roles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#login" class="btn btn-ghost">Login</a>
+        <a href="#register" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="badge">
+          <span></span>
+          Online Grievance System
+        </div>
+        <h1>Resolve complaints with clarity, speed, and accountability.</h1>
+        <p class="lead">
+          ComplainEase is a digital complaint management platform that helps users,
+          officers, and administrators track grievances from submission to resolution.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#register" class="btn btn-primary btn-large">Post a Complaint</a>
+          <a href="#track" class="btn btn-secondary btn-large">Track Status</a>
+        </div>
+
+        <div class="stats-row">
+          <div>
+            <strong id="statComplaints">24,500+</strong>
+            <span>Complaints Resolved</span>
+          </div>
+          <div>
+            <strong>48 hrs</strong>
+            <span>Average Response</span>
+          </div>
+          <div>
+            <strong>99%</strong>
+            <span>Transparency Score</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-panel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <span class="eyebrow">Complaint Dashboard</span>
+              <h3>Live Complaint Center</h3>
+            </div>
+            <span class="status-dot online">Live</span>
+          </div>
+
+          <div class="complaint-card highlighted">
+            <div class="complaint-top">
+              <span class="ticket-id">CE-02418</span>
+              <span class="badge-inverse urgent">Priority High</span>
+            </div>
+            <h4>Water Supply Issue</h4>
+            <p class="small-text">Ward 12 • 2 hours ago</p>
+            <div class="progress-wrap">
+              <div class="progress-row">
+                <span>Status</span>
+                <span class="progress-status">In Review</span>
+              </div>
+              <div class="progress-bar">
+                <div style="width: 68%;"></div>
+              </div>
+            </div>
+            <div class="timeline">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+
+          <div class="quick-actions">
+            <button class="icon-button">+ Post Complaint</button>
+            <button class="icon-button">View History</button>
+            <button class="icon-button">Map Location</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section features" id="services">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">Platform Services</span>
+        <h2>Complaint lifecycle management</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <span class="icon-wrap">01</span>
+          <h3>User Registration</h3>
+          <p>
+            Secure login and user registration for residents who need to raise a grievance,
+            upload evidence, and track progress.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="icon-wrap">02</span>
+          <h3>Complaint Submission</h3>
+          <p>
+            Raise comprehensive complaints with categories, descriptions, supporting documents,
+            and service location details.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="icon-wrap">03</span>
+          <h3>Real-time Tracking</h3>
+          <p>
+            Users can check complaint status, receive updates, and monitor resolution work
+            through a transparent service journey.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="icon-wrap">04</span>
+          <h3>Map & Evidence</h3>
+          <p>
+            Complaints can include geotag location markers and supporting attachments for
+            rapid response by officers.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="icon-wrap">05</span>
+          <h3>Officer Management</h3>
+          <p>
+            Officers can review complaints, update resolution proof, and maintain complaint
+            service records.
+          </p>
+        </article>
+
+        <article class="feature-card">
+          <span class="icon-wrap">06</span>
+          <h3>Admin Controls</h3>
+          <p>
+            Admins generate officer IDs/passwords, manage accounts, hide features, and access
+            all complaint records.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section process" id="process">
+    <div class="container two-col">
+      <div>
+        <span class="eyebrow">How it works</span>
+        <h2>From grievance to resolution</h2>
+        <div class="process-list">
+          <div class="process-item">
+            <span class="process-number">1</span>
+            <div>
+              <h3>Register & Sign In</h3>
+              <p>Users, officers, and administrators create secure accounts for platform access.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <span class="process-number">2</span>
+            <div>
+              <h3>Submit the Complaint</h3>
+              <p>Enter issue details, category, supporting documents, and a location marker.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <span class="process-number">3</span>
+            <div>
+              <h3>Officer Review & Update</h3>
+              <p>Officers examine complaints, assign response, and update status or proof of work.</p>
+            </div>
+          </div>
+
+          <div class="process-item">
+            <span class="process-number">4</span>
+            <div>
+              <h3>Resolution & Feedback</h3>
+              <p>Users receive notifications, feedback, and closure details through the portal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="panel-card inner-panel">
+        <div class="panel-header compact">
+          <div>
+            <span class="eyebrow">Complaint Tracking</span>
+            <h3>Complaint Status</h3>
+          </div>
+          <span class="badge-inverse success">Resolved</span>
+        </div>
+
+        <div class="status-summary">
+          <div class="summary-row">
+            <span>Ticket Number</span>
+            <strong>CE-02418</strong>
+          </div>
+          <div class="summary-row">
+            <span>Category</span>
+            <strong>Public Works</strong>
+          </div>
+          <div class="summary-row">
+            <span>Assigned Officer</span>
+            <strong>Officer N. Sharma</strong>
+          </div>
+          <div class="summary-row">
+            <span>Last update</span>
+            <strong>08 Aug 2026, 02:45 PM</strong>
+          </div>
+        </div>
+
+        <div class="map-box">
+          <div class="map-overlay">
+            <span class="pin"></span>
+            <div>
+              <strong>Service Location</strong>
+              <p>Ward 12, Main Street</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section roles" id="roles">
+    <div class="container">
+      <div class="section-head centered">
+        <span class="eyebrow">User Roles</span>
+        <h2>Role-based complaint access</h2>
+      </div>
+
+      <div class="role-grid">
+        <article class="role-card user-role">
+          <div class="role-header">
+            <span class="role-icon">U</span>
+            <div>
+              <span class="tag">User</span>
+              <h3>Citizen</h3>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Login</li>
+            <li>Register</li>
+            <li>Post Complaint</li>
+            <li>Location Mark in Google Map</li>
+            <li>View complaint status</li>
+            <li>Feedback</li>
+            <li>Get Admin Contact details</li>
+          </ul>
+        </article>
+
+        <article class="role-card officer-role">
+          <div class="role-header">
+            <span class="role-icon">O</span>
+            <div>
+              <span class="tag">Officer</span>
+              <h3>Service Officer</h3>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Register</li>
+            <li>Login</li>
+            <li>View Complaint</li>
+            <li>Update status</li>
+            <li>Update proof of work</li>
+          </ul>
+        </article>
+
+        <article class="role-card admin-role">
+          <div class="role-header">
+            <span class="role-icon">A</span>
+            <div>
+              <span class="tag">Admin</span>
+              <h3>Administrator</h3>
+            </div>
+          </div>
+          <ul class="check-list">
+            <li>Generate id & password for officer</li>
+            <li>Full rights over the OES</li>
+            <li>Create/delete accounts</li>
+            <li>View all accounts</li>
+            <li>Change password</li>
+            <li>Hide/show system features</li>
+            <li>Insert available information</li>
+            <li>Access officer accounts</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-band">
+    <div class="container cta-content">
+      <div>
+        <span class="eyebrow">Need help?</span>
+        <h2>Submit your grievance in minutes.</h2>
+        <p class="lead small">
+          The ComplainEase portal ensures your complaint receives a clear pathway to resolution.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a href="#complaint" class="btn btn-primary btn-large">Create Complaint</a>
+        <a href="#contact" class="btn btn-secondary btn-large">Admin Contact</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="container contact-grid">
+      <div>
+        <span class="eyebrow">ComplainEase Support</span>
+        <h2>Contact & Emergency Information</h2>
+        <div class="contact-cards">
+          <div class="contact-card">
+            <span class="icon-inline">☎</span>
+            <div>
+              <h3>Admin Support</h3>
+              <p>+91 98765 43210</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="icon-inline">@</span>
+            <div>
+              <h3>Email</h3>
+              <p>support@complainease.org</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <span class="icon-inline">⌁</span>
+            <div>
+              <h3>Service Center</h3>
+              <p>Public Works Department</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-card">
+        <div class="panel-header compact">
+          <div>
+            <span class="eyebrow">Quick Complaint</span>
+            <h3>Post a complaint</h3>
+          </div>
+          <span class="status-dot pending">Open</span>
+        </div>
+
+        <form class="complaint-form">
+          <label>
+            <span>Full Name</span>
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            <span>Complaint Category</span>
+            <select>
+              <option>Public Service</option>
+              <option>Utilities</option>
+              <option>Safety</option>
+              <option>Administration</option>
+            </select>
+          </label>
+          <label>
+            <span>Description</span>
+            <textarea rows="4" placeholder="Describe the issue"></textarea>
+          </label>
+          <button class="btn btn-primary btn-full">Submit Complaint</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="brand footer-brand">
+          <span class="brand-icon">CE</span>
+          <span>ComplainEase</span>
+        </a>
+        <p class="footer-copy">
+          A transparent online grievance and resolution platform.
+        </p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Post Complaint</a></li>
+          <li><a href="#">Track Status</a></li>
+          <li><a href="#">Feedback</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Admin Console</h4>
+        <ul class="footer-links">
+          <li><a href="#">Officer Accounts</a></li>
+          <li><a href="#">Manage Features</a></li>
+          <li><a href="#">Reports</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul class="footer-links">
+          <li><a href="#">Help Desk</a></li>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 ComplainEase. All rights reserved.</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

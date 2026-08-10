@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReNewMarket Admin</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">
+                    <span class="leaf-icon">✦</span>
+                </div>
+                <div>
+                    <div class="brand-title">ReNewMarket</div>
+                    <div class="brand-subtitle">Marketplace Console</div>
+                </div>
+            </div>
+
+            <nav class="navigation">
+                <div class="nav-label">Workspace</div>
+                <a href="#" class="nav-link active">
+                    <span class="nav-icon">▦</span>
+                    <span>Overview</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">◎</span>
+                    <span>User Management</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">◌</span>
+                    <span>Category Management</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">◍</span>
+                    <span>Commodity Management</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">✓</span>
+                    <span>Order Management</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">◈</span>
+                    <span>Transactions</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <span class="nav-icon">☼</span>
+                    <span>Notifications</span>
+                </a>
+            </nav>
+
+            <div class="admin-card">
+                <div class="admin-status">
+                    <span class="status-dot"></span>
+                    <span>System Online</span>
+                </div>
+                <div class="admin-info">
+                    <div class="admin-avatar">RM</div>
+                    <div>
+                        <div class="admin-name">Renew Admin</div>
+                        <div class="admin-role">Administrator</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="topbar">
+                <div>
+                    <div class="page-kicker">Marketplace Control Center</div>
+                    <h1>ReNewMarket Dashboard</h1>
+                </div>
+                <div class="top-actions">
+                    <button class="icon-button">☐</button>
+                    <button class="icon-button">♢</button>
+                    <button class="primary-button">+ Add Listing</button>
+                </div>
+            </header>
+
+            <section class="summary-grid">
+                <article class="summary-card highlight">
+                    <div class="summary-card-top">
+                        <span class="summary-label">Active Sellers</span>
+                        <span class="trend up">+12.8%</span>
+                    </div>
+                    <div class="value-row">
+                        <span class="summary-number">246</span>
+                        <span class="icon-badge success">↟</span>
+                    </div>
+                    <div class="summary-detail">36 pending approval</div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-card-top">
+                        <span class="summary-label">Marketplace Listings</span>
+                        <span class="trend up">+24.1%</span>
+                    </div>
+                    <div class="value-row">
+                        <span class="summary-number">1,842</span>
+                        <span class="icon-badge info">◎</span>
+                    </div>
+                    <div class="summary-detail">318 active today</div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-card-top">
+                        <span class="summary-label">Orders</span>
+                        <span class="trend down">-2.6%</span>
+                    </div>
+                    <div class="value-row">
+                        <span class="summary-number">524</span>
+                        <span class="icon-badge warning">↯</span>
+                    </div>
+                    <div class="summary-detail">24 awaiting pickup</div>
+                </article>
+
+                <article class="summary-card">
+                    <div class="summary-card-top">
+                        <span class="summary-label">Gross Volume</span>
+                        <span class="trend up">+8.9%</span>
+                    </div>
+                    <div class="value-row">
+                        <span class="summary-number">$78.2k</span>
+                        <span class="icon-badge neutral">□</span>
+                    </div>
+                    <div class="summary-detail">Net revenue: $34.9k</div>
+                </article>
+            </section>
+
+            <section class="panel-layout">
+                <section class="panel large-panel">
+                    <div class="panel-header">
+                        <div>
+                            <div class="panel-title">Marketplace Activity</div>
+                            <div class="panel-subtitle">Listings and transactions</div>
+                        </div>
+                        <div class="segmented">
+                            <button class="segment active">7D</button>
+                            <button class="segment">30D</button>
+                            <button class="segment">YTD</button>
+                        </div>
+                    </div>
+
+                    <div class="chart-card">
+                        <div class="chart-header">
+                            <span>Sales Trend</span>
+                            <span class="chart-total">+18.7% growth</span>
+                        </div>
+                        <div class="line-chart">
+                            <div class="chart-area">
+                                <svg viewBox="0 0 780 220" preserveAspectRatio="none" class="chart-svg">
+                                    <defs>
+                                        <linearGradient id="lineGradient" x1="0" x2="0" y1="0" y2="1">
+                                            <stop offset="0" stop-color="#2ca582" stop-opacity="0.22" />
+                                            <stop offset="1" stop-color="#2ca582" stop-opacity="0.01" />
+                                        </linearGradient>
+                                    </defs>
+                                    <g>
+                                        <line x1="0" x2="780" y1="180" y2="180" class="grid-line" />
+                                        <line x1="0" x2="780" y1="120" y2="120" class="grid-line" />
+                                        <line x1="0" x2="780" y1="60" y2="60" class="grid-line" />
+                                        <line x1="0" x2="0" y1="0" y2="220" class="grid-line" />
+                                        <line x1="130" x2="130" y1="0" y2="220" class="grid-line" />
+                                        <line x1="260" x2="260" y1="0" y2="220" class="grid-line" />
+                                        <line x1="390" x2="390" y1="0" y2="220" class="grid-line" />
+                                        <line x1="520" x2="520" y1="0" y2="220" class="grid-line" />
+                                        <line x1="650" x2="650" y1="0" y2="220" class="grid-line" />
+                                    </g>
+                                    <path class="chart-fill" d="M0,190 C20,170 40,170 70,158 S120,145 150,139 S210,147 240,128 S300,130 330,95 S380,90 410,88 S470,48 500,65 S550,42 580,40 S660,30 780,25 L780,220 L0,220 Z" />
+                                    <path class="chart-line" d="M0,190 C20,170 40,170 70,158 S120,145 150,139 S210,147 240,128 S300,130 330,95 S380,90 410,88 S470,48 500,65 S550,42 580,40 S660,30 780,25" />
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="chart-axis">
+                            <span>Mon</span>
+                            <span>Tue</span>
+                            <span>Wed</span>
+                            <span>Thu</span>
+                            <span>Fri</span>
+                            <span>Sat</span>
+                            <span>Sun</span>
+                        </div>
+                    </div>
+                </section>
+
+                <aside class="panel status-panel">
+                    <div class="panel-header compact">
+                        <div>
+                            <div class="panel-title">Operations</div>
+                            <div class="panel-subtitle">Live system health</div>
+                        </div>
+                        <span class="online-pill">Online</span>
+                    </div>
+                    <div class="status-list">
+                        <div class="status-row">
+                            <span class="status-label">Login Gateway</span>
+                            <span class="status-status success-text">Healthy</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">Payment System</span>
+                            <span class="status-status success-text">Connected</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">Pickup Scheduler</span>
+                            <span class="status-status warning-text">21 pending</span>
+                        </div>
+                        <div class="status-row">
+                            <span class="status-label">Network</span>
+                            <span class="status-status success-text">Stable</span>
+                        </div>
+                    </div>
+                    <button class="ghost-button fullwidth">Review Alerts</button>
+                </aside>
+            </section>
+
+            <section class="content-grid">
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <div class="panel-title">Category Management</div>
+                            <div class="panel-subtitle">Market categories</div>
+                        </div>
+                        <button class="icon-button small">+</button>
+                    </div>
+
+                    <div class="category-list">
+                        <div class="category-row">
+                            <span class="category-icon electronics">↻</span>
+                            <div>
+                                <div class="category-name">Electronics</div>
+                                <div class="category-meta">324 active listings</div>
+                            </div>
+                            <span class="badge success">Active</span>
+                        </div>
+
+                        <div class="category-row">
+                            <span class="category-icon furniture">▤</span>
+                            <div>
+                                <div class="category-name">Furniture</div>
+                                <div class="category-meta">158 active listings</div>
+                            </div>
+                            <span class="badge success">Active</span>
+                        </div>
+
+                        <div class="category-row">
+                            <span class="category-icon clothing">♡</span>
+                            <div>
+                                <div class="category-name">Clothing</div>
+                                <div class="category-meta">276 active listings</div>
+                            </div>
+                            <span class="badge success">Active</span>
+                        </div>
+
+                        <div class="category-row">
+                            <span class="category-icon collectibles">✧</span>
+                            <div>
+                                <div class="category-name">Collectibles</div>
+                                <div class="category-meta">97 active listings</div>
+                            </div>
+                            <span class="badge warning">Review</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <div class="panel-title">Commodity Management</div>
+                            <div class="panel-subtitle">Latest listings</div>
+                        </div>
+                        <button class="icon-button small">•••</button>
+                    </div>
+
+                    <div class="listing-list">
+                        <article class="listing-row">
+                            <div class="listing-image image-one"></div>
+                            <div class="listing-text">
+                                <div class="listing-title">Vintage Studio Lamp</div>
+                                <div class="listing-detail">Furniture • Listed by Martha</div>
+                                <div class="listing-bottom">
+                                    <span class="price">$58</span>
+                                    <span class="badge info">Editable</span>
+                                </div>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="small-button">Edit</button>
+                                <button class="small-button danger">Delete</button>
+                            </div>
+                        </article>
+
+                        <article class="listing-row">
+                            <div class="listing-image image-two"></div>
+                            <div class="listing-text">
+                                <div class="listing-title">Apple AirPods Pro</div>
+                                <div class="listing-detail">Electronics • Listed by OD-02</div>
+                                <div class="listing-bottom">
+                                    <span class="price">$135</span>
+                                    <span class="badge success">Verified</span>
+                                </div>
+                            </div>
+                            <div class="listing-actions">
+                                <button class="small-button">Edit</button>
+                                <button class="small-button danger">Delete</button>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="panel">
+                    <div class="panel-header">
+                        <div>
+                            <div class="panel-title">Order Management</div>
+                            <div class="panel-subtitle">Shipping and receipts</div>
+                        </div>
+                        <button class="icon-button small">+</button>
+                    </div>
+
+                    <div class="order-list">
+                        <article class="order-row">
+                            <div>
+                                <div class="order-title">#RM-2048</div>
+                                <div class="order-detail">Shipped to Walnut Ave</div>
+                            </div>
+                            <span class="badge status-shipped">Shipped</span>
+                        </article>
+
+                        <article class="order-row">
+                            <div>
+                                <div class="order-title">#RM-2047</div>
+                                <div class="order-detail">Delivered to Carter Lane</div>
+                            </div>
+                            <span class="badge status-received">Received</span>
+                        </article>
+
+                        <article class="order-row">
+                            <div>
+                                <div class="order-title">#RM-2046</div>
+                                <div class="order-detail">Pickup scheduled</div>
+                            </div>
+                            <span class="badge warning">Pending</span>
+                        </article>
+                    </div>
+                </section>
+            </section>
+
+            <section class="quick-row">
+                <section class="panel actionable-panel">
+                    <div class="panel-header">
+                        <div>
+                            <div class="panel-title">User Management</div>
+                            <div class="panel-subtitle">Accounts and permissions</div>
+                        </div>
+                        <div class="header-actions">
+                            <button class="ghost-button">Edit</button>
+                            <button class="ghost-button danger-text">Delete</button>
+                        </div>
+                    </div>
+                    <div class="user-table">
+                        <div class="table-head">
+                            <span>User</span>
+                            <span>Role</span>
+                            <span>Status</span>
+                            <span>Last Login</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="user-name">Jordan Carter</span>
+                            <span>Seller</span>
+                            <span class="badge success">Active</span>
+                            <span>08:14 AM</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="user-name">Morgan Bloom</span>
+                            <span>Buyer</span>
+                            <span class="badge neutral">Online</span>
+                            <span>10:02 AM</span>
+                        </div>
+                        <div class="table-row">
+                            <span class="user-name">River Towns</span>
+                            <span>Admin</span>
+                            <span class="badge success">Active</span>
+                            <span>09:21 AM</span>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

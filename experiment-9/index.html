@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechSavvy | Smart Tech Store</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav-wrapper">
+      <div class="brand">
+        <span class="brand-icon">ts</span>
+        <span class="brand-text">TechSavvy</span>
+      </div>
+      <nav class="main-nav">
+        <a class="active" href="#">Home</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+        <a href="#deals">Deals</a>
+        <a href="#admin">Admin</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="icon-button" aria-label="Search">
+          <span>⌕</span>
+        </button>
+        <button class="icon-button cart-button" aria-label="Cart">
+          <span>Cart</span>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <a class="login-button" href="#">Login</a>
+      </div>
+    </div>
+  </div>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <section class="hero-copy">
+        <div class="tagline">
+          <span class="pulse-dot"></span>
+          Smart Tech Marketplace
+        </div>
+        <h1>Power your next upgrade.</h1>
+        <p class="hero-text">
+          Discover next-generation gadgets built for work, play, and everyday momentum.
+          Shop faster, smarter, and better with TechSavvy.
+        </p>
+        <div class="hero-actions">
+          <a class="primary-button" href="#products">Shop Collection</a>
+          <a class="secondary-button" href="#categories">Explore Categories</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="stat-number">24K+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+          <div>
+            <span class="stat-number">2,400+</span>
+            <span class="stat-label">Gadget Picks</span>
+          </div>
+          <div>
+            <span class="stat-number">Same Day</span>
+            <span class="stat-label">Dispatch</span>
+          </div>
+        </div>
+      </section>
+
+      <aside class="hero-panel">
+        <div class="panel-glass">
+          <div class="panel-header">
+            <span class="panel-kicker">Today’s TechDrop</span>
+            <span class="live-badge">Live Deal</span>
+          </div>
+          <div class="image-stack">
+            <div class="device-frame main-device">
+              <div class="device-top">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="device-screen">
+                <div class="screen-logo">TS</div>
+                <div class="screen-lines">
+                  <div class="line short"></div>
+                  <div class="line medium"></div>
+                  <div class="line long"></div>
+                </div>
+                <div class="product-badge">NovaBook Pro</div>
+              </div>
+            </div>
+            <div class="floating-card deal-card">
+              <span>Flash Deal</span>
+              <strong>Up to 35% OFF</strong>
+              <small>Smart accessories</small>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </header>
+
+  <section class="section section-categories">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow">TechSavvy Collections</span>
+          <h2>Browse Categories</h2>
+        </div>
+        <a class="text-link" href="#">All Categories</a>
+      </div>
+      <div class="category-grid" id="categories">
+        <article class="category-card featured">
+          <div class="category-icon">
+            <span>▣</span>
+          </div>
+          <div>
+            <span class="category-kicker">Popular Category</span>
+            <h3>Smartphones</h3>
+            <p>Latest devices, mobile accessories, and creator-ready bundles.</p>
+          </div>
+          <button class="chip-button">Explore</button>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">
+            <span>◌</span>
+          </div>
+          <div>
+            <span class="category-kicker">Performance</span>
+            <h3>Laptops</h3>
+            <p>Workstations for creators, students, and business productivity.</p>
+          </div>
+          <button class="chip-button">Explore</button>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">
+            <span>▥</span>
+          </div>
+          <div>
+            <span class="category-kicker">Tab & Wear</span>
+            <h3>Tablets</h3>
+            <p>Fluid tablets, stylus tools, and compact productivity systems.</p>
+          </div>
+          <button class="chip-button">Explore</button>
+        </article>
+
+        <article class="category-card">
+          <div class="category-icon">
+            <span>☼</span>
+          </div>
+          <div>
+            <span class="category-kicker">Connected Living</span>
+            <h3>Accessories</h3>
+            <p>Audio gear, charging hubs, smart peripherals and more.</p>
+          </div>
+          <button class="chip-button">Explore</button>
+        </article>
+      </div>
+
+      <div class="subcategory-row">
+        <div class="section-subtitle">Subcategories</div>
+        <div class="subcategory-list">
+          <span class="tag">5G Smartphones</span>
+          <span class="tag">Gaming Laptops</span>
+          <span class="tag">UltraBooks</span>
+          <span class="tag">Pro Tablets</span>
+          <span class="tag">Audio Gear</span>
+          <span class="tag">Smart Wearables</span>
+          <span class="tag">Chargers</span>
+          <span class="tag">Connectivity</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section featured-deals" id="deals">
+    <div class="container deal-layout">
+      <div class="deal-content">
+        <span class="eyebrow">Exclusive Online Deals</span>
+        <h2>Seasonal drops. Smart savings.</h2>
+        <p>
+          Shop limited-time offers and curated bundles that make it easier to upgrade your everyday toolkit.
+        </p>
+        <div class="deal-list">
+          <div>
+            <span class="deal-icon">↯</span>
+            <div>
+              <h4>Today’s Tech Stack</h4>
+              <p>Save 25% on starter workstation bundles.</p>
+            </div>
+          </div>
+          <div>
+            <span class="deal-icon">★</span>
+            <div>
+              <h4>Smart Rewards</h4>
+              <p>Unlock loyalty savings on accessories and mobile plans.</p>
+            </div>
+          </div>
+          <div>
+            <span class="deal-icon">⎋</span>
+            <div>
+              <h4>Free Shipping</h4>
+              <p>Fast delivery on orders above $150.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="deal-panel">
+        <div class="deal-image">
+          <span class="discount-badge">-35%</span>
+          <div class="mini-device">
+            <span class="brand-name">TS Lab</span>
+            <span class="device-title">Creator Kit</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section products-section" id="products">
+    <div class="container">
+      <div class="section-head product-head">
+        <div>
+          <span class="eyebrow">New Arrivals</span>
+          <h2>Featured Products</h2>
+        </div>
+        <div class="filters">
+          <button class="filter-button active" data-filter="all">All</button>
+          <button class="filter-button" data-filter="Smartphones">Smartphones</button>
+          <button class="filter-button" data-filter="Laptops">Laptops</button>
+          <button class="filter-button" data-filter="Tablets">Tablets</button>
+          <button class="filter-button" data-filter="Accessories">Accessories</button>
+        </div>
+      </div>
+
+      <div class="product-grid">
+        <article class="product-card" data-category="Smartphones">
+          <div class="product-image phone-bg">
+            <span class="tag card-tag">Smartphones</span>
+            <span class="price-tag">$899</span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Pulse X Smart</h3>
+              <span class="rating">★★★★★</span>
+            </div>
+            <p class="description">AI-powered 5G smartphone with dynamic AMOLED display.</p>
+            <div class="product-meta">
+              <span>128GB</span>
+              <span>6.7″ OLED</span>
+              <span>Fresh Stock</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-button">Add to Cart</button>
+              <button class="wishlist-button">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="Laptops">
+          <div class="product-image laptop-bg">
+            <span class="tag card-tag">Laptops</span>
+            <span class="price-tag">$1,399</span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>NovaBook Pro</h3>
+              <span class="rating">★★★★★</span>
+            </div>
+            <p class="description">Ultra-light creator laptop with next-gen performance.</p>
+            <div class="product-meta">
+              <span>14″</span>
+              <span>16GB RAM</span>
+              <span>1TB SSD</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-button">Add to Cart</button>
+              <button class="wishlist-button">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="Tablets">
+          <div class="product-image tablet-bg">
+            <span class="tag card-tag">Tablets</span>
+            <span class="price-tag">$649</span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>Canvas Tab Air</h3>
+              <span class="rating">★★★★☆</span>
+            </div>
+            <p class="description">A sharp, portable tablet for learning and productivity.</p>
+            <div class="product-meta">
+              <span>11″</span>
+              <span>Liquid Retina</span>
+              <span>Stylus Ready</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-button">Add to Cart</button>
+              <button class="wishlist-button">♡</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card" data-category="Accessories">
+          <div class="product-image audio-bg">
+            <span class="tag card-tag">Accessories</span>
+            <span class="price-tag">$129</span>
+          </div>
+          <div class="product-info">
+            <div class="product-top">
+              <h3>EchoCore Headset</h3>
+              <span class="rating">★★★★★</span>
+            </div>
+            <p class="description">Low-latency sound system for immersive multimedia.</p>
+            <div class="product-meta">
+              <span>Noise Cancel</span>
+              <span>40h Battery</span>
+              <span>Low Latency</span>
+            </div>
+            <div class="product-actions">
+              <button class="add-button">Add to Cart</button>
+              <button class="wishlist-button">♡</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section customer-section">
+    <div class="container customer-layout">
+      <div class="customer-panel">
+        <span class="eyebrow">TechSavvy Experience</span>
+        <h2>From cart to checkout in moments.</h2>
+        <div class="journey">
+          <div class="journey-step">
+            <span class="step-number">01</span>
+            <div>
+              <h4>Product Search</h4>
+              <p>Explore gadgets by category, specs, deal, and customer rating.</p>
+            </div>
+          </div>
+          <div class="journey-step">
+            <span class="step-number">02</span>
+            <div>
+              <h4>Shopping Cart</h4>
+              <p>Review, edit, and remove available items before checkout.</p>
+            </div>
+          </div>
+          <div class="journey-step">
+            <span class="step-number">03</span>
+            <div>
+              <h4>Order Tracking</h4>
+              <p>Follow order status, shipment data, and purchase history.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="recommendations">
+        <div class="recommend-card">
+          <div class="section-head compact">
+            <div>
+              <span class="eyebrow">For You</span>
+              <h2>Recommended</h2>
+            </div>
+            <span class="icon-sm">✦</span>
+          </div>
+          <div class="recommend-list">
+            <div class="recommend-row">
+              <span class="recommend-thumb"></span>
+              <div>
+                <strong>NovaBook Pro</strong>
+                <small>Creator Bundle</small>
+              </div>
+              <span class="price-small">$1,399</span>
+            </div>
+            <div class="recommend-row">
+              <span class="recommend-thumb alt"></span>
+              <div>
+                <strong>EchoCore Headset</strong>
+                <small>Audio Gear</small>
+              </div>
+              <span class="price-small">$129</span>
+            </div>
+            <div class="recommend-row">
+              <span class="recommend-thumb third"></span>
+              <div>
+                <strong>Canvas Tab Air</strong>
+                <small>Tablet Collection</small>
+              </div>
+              <span class="price-small">$649</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section admin-section" id="admin">
+    <div class="container admin-layout">
+      <div class="section-head admin-head">
+        <div>
+          <span class="eyebrow">Admin Control</span>
+          <h2>Store Management</h2>
+        </div>
+        <button class="primary-button small-button">Add Product</button>
+      </div>
+      <div class="admin-grid">
+        <article class="admin-card highlight">
+          <span class="admin-icon">▱</span>
+          <div>
+            <span class="admin-label">Product Catalog</span>
+            <strong>2,407</strong>
+          </div>
+          <span class="admin-status">Live</span>
+        </article>
+        <article class="admin-card">
+          <span class="admin-icon">☰</span>
+          <div>
+            <span class="admin-label">Inventory</span>
+            <strong>186 Low Stock</strong>
+          </div>
+          <span class="admin-status warning">Review</span>
+        </article>
+        <article class="admin-card">
+          <span class="admin-icon">☍</span>
+          <div>
+            <span class="admin-label">Orders</span>
+            <strong>342</strong>
+          </div>
+          <span class="admin-status success">Active</span>
+        </article>
+        <article class="admin-card">
+          <span class="admin-icon">☺</span>
+          <div>
+            <span class="admin-label">Customers</span>
+            <strong>18,205</strong>
+          </div>
+          <span class="admin-status">Tracking</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand footer-brand">
+          <span class="brand-icon">ts</span>
+          <span class="brand-text">TechSavvy</span>
+        </div>
+        <p class="footer-copy">Smart devices, stable service, and modern shopping built for your next upgrade.</p>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Smartphones</a></li>
+          <li><a href="#">Laptops</a></li>
+          <li><a href="#">Tablets</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Order Tracking</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Help Center</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <form class="newsletter">
+          <input type="email" placeholder="Email address" aria-label="Email address" />
+          <button>Join</button>
+        </form>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 TechSavvy. All rights reserved.</span>
+      <span>Privacy • Terms • Security</span>
+    </div>
+  </footer>
+
+  <aside class="cart-drawer" aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">Your TechCart</span>
+        <h3>Shopping Cart</h3>
+      </div>
+      <button id="closeCart" class="close-cart">×</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="empty-cart">
+        <span>Cart is empty</span>
+      </div>
+    </div>
+    <div class="cart-summary">
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="checkout-button">Checkout Securely</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast">
+    <span>Added to cart</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

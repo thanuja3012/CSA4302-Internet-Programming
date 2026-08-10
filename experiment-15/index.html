@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EasyToll | Smart Toll Payments</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 12h18M5 7h14M7 17h10" />
+          </svg>
+        </span>
+        <span>EasyToll</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#" class="active">Dashboard</a>
+        <a href="#">eWallet</a>
+        <a href="#">Toll Pass</a>
+        <a href="#">Transactions</a>
+        <a href="#">Support</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-ghost">Log in</button>
+        <button class="btn btn-primary">Join Free</button>
+      </div>
+    </div>
+  </div>
+
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-copy">
+        <div class="kicker">
+          <span class="pulse-dot"></span>
+          Toll Network Online
+        </div>
+        <h1>Pay tolls before you travel.</h1>
+        <p class="lead">
+          EasyToll helps drivers buy eTickets, manage toll passes, recharge eWallets,
+          and scan verified QR access for a faster, smarter commute.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-large" href="#">Buy eTicket</a>
+          <a class="btn btn-outline btn-large" href="#">Apply Toll Pass</a>
+        </div>
+
+        <div class="hero-stats">
+          <article>
+            <span class="stat-number">24/7</span>
+            <span class="stat-label">Payment Access</span>
+          </article>
+          <article>
+            <span class="stat-number">18K+</span>
+            <span class="stat-label">Active Drivers</span>
+          </article>
+          <article>
+            <span class="stat-number">02s</span>
+            <span class="stat-label">QR Verification</span>
+          </article>
+        </div>
+      </div>
+
+      <aside class="hero-panel glass-panel">
+        <div class="panel-head">
+          <div>
+            <span class="label-text">Today’s Trip</span>
+            <h3>Route Status</h3>
+          </div>
+          <span class="status-chip success">Live</span>
+        </div>
+
+        <div class="map-card">
+          <div class="route-map">
+            <div class="map-bg"></div>
+            <div class="route-line"></div>
+            <div class="route-pin start"></div>
+            <div class="route-pin end"></div>
+            <div class="route-destination">
+              <span>NH-45 Gateway</span>
+              <strong>Gate 07</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="wallet-row">
+          <div>
+            <span class="label-text">eWallet Balance</span>
+            <div class="balance">₹2,450.00</div>
+          </div>
+          <button class="icon-button">+</button>
+        </div>
+
+        <div class="ticket-summary">
+          <div class="summary-row">
+            <span>Fastag Toll Pass</span>
+            <span class="success-text">Active</span>
+          </div>
+          <div class="summary-row">
+            <span>Route: Chennai → Tirupati</span>
+            <span class="amount">₹180</span>
+          </div>
+          <div class="summary-row">
+            <span>Payment Method</span>
+            <span>UPI / Cards</span>
+          </div>
+        </div>
+
+        <button class="btn btn-primary btn-full">Pay Remaining Toll</button>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section feature-section">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-kicker">EasyToll Network</span>
+        <h2>One secure platform for every road payment.</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card highlighted">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </span>
+          <h3>User Dashboard</h3>
+          <p>Register, log in, recharge eWallets, apply toll passes, renew routes, and review toll activity.</p>
+          <a href="#" class="text-link">Open account</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 9h16M4 15h16M6 4h12l2 5-2 5H6l-2-5 2-5z" />
+            </svg>
+          </span>
+          <h3>eTicket System</h3>
+          <p>Buy toll eTickets in advance to avoid queues and keep every trip payment ready before departure.</p>
+          <a href="#" class="text-link">Buy now</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 3 4 7v6c0 7 4 10 8 10s8-3 8-10V7l-8-4z" />
+            </svg>
+          </span>
+          <h3>QR Toll Pass</h3>
+          <p>Generate QR codes for toll pass approvals and let toll gates verify pass ID instantly.</p>
+          <a href="#" class="text-link">Generate QR</a>
+        </article>
+
+        <article class="feature-card">
+          <span class="feature-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12h18M5 7h14M7 17h10" />
+            </svg>
+          </span>
+          <h3>Toll Gate Control</h3>
+          <p>Gate users scan QR tickets, verify toll ID, confirm location, and update stop activity.</p>
+          <a href="#" class="text-link">Gate login</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dashboard-section">
+    <div class="container dashboard-grid">
+      <div class="panel soft-panel">
+        <div class="panel-head">
+          <div>
+            <span class="label-text">User Operations</span>
+            <h2>My Account</h2>
+          </div>
+          <span class="status-chip">Processing</span>
+        </div>
+
+        <div class="account-list">
+          <div class="account-row">
+            <span class="icon-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 20h16M6 20V10m12 10V10M9 10V7h6v3" />
+              </svg>
+            </span>
+            <div>
+              <span class="row-title">Add Money – eWallet</span>
+              <span class="row-detail">Card, UPI, and bank balance top-up</span>
+            </div>
+            <span class="row-arrow">›</span>
+          </div>
+
+          <div class="account-row">
+            <span class="icon-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 7h18M3 12h18M3 17h12" />
+              </svg>
+            </span>
+            <div>
+              <span class="row-title">Buy Toll eTicket</span>
+              <span class="row-detail">Prepaid trip validation</span>
+            </div>
+            <span class="row-arrow">›</span>
+          </div>
+
+          <div class="account-row">
+            <span class="icon-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M21 15a2 2 0 0 1-2 2H18l-2 3H8l-2-3H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </span>
+            <div>
+              <span class="row-title">Apply / Renewal Toll Pass</span>
+              <span class="row-detail">Urban and intercity trip access</span>
+            </div>
+            <span class="row-arrow">›</span>
+          </div>
+
+          <div class="account-row">
+            <span class="icon-badge">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h16M4 18h9" />
+              </svg>
+            </span>
+            <div>
+              <span class="row-title">Transaction History</span>
+              <span class="row-detail">Payment summaries and invoice records</span>
+            </div>
+            <span class="row-arrow">›</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="panel transaction-panel">
+        <div class="panel-head compact">
+          <div>
+            <span class="label-text">Recent Travel</span>
+            <h2>Payment Summary</h2>
+          </div>
+          <button class="icon-button small-button">•••</button>
+        </div>
+
+        <div class="summary-chart">
+          <div class="chart-bar">
+            <div style="height: 38%;"></div>
+            <div style="height: 78%;"></div>
+            <div style="height: 48%;"></div>
+            <div style="height: 88%;"></div>
+            <div style="height: 58%;"></div>
+            <div style="height: 72%;"></div>
+            <div style="height: 45%;"></div>
+          </div>
+          <div class="summary-amount">
+            <span class="label-text">Current Spend</span>
+            <div class="balance-large">₹1,340</div>
+          </div>
+        </div>
+
+        <div class="transaction-list">
+          <article>
+            <span class="transaction-title">NH-45 Entry</span>
+            <span class="transaction-date">08 Aug, 08:30</span>
+            <span class="amount debit">-₹120</span>
+          </article>
+          <article>
+            <span class="transaction-title">eWallet Top-up</span>
+            <span class="transaction-date">08 Aug, 11:45</span>
+            <span class="amount credit">+₹500</span>
+          </article>
+          <article>
+            <span class="transaction-title">Toll Pass Renewal</span>
+            <span class="transaction-date">07 Aug, 13:10</span>
+            <span class="amount debit">-₹650</span>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section admin-section">
+    <div class="container admin-layout">
+      <div class="admin-copy">
+        <span class="section-kicker">Control Centre</span>
+        <h2>Admin & toll management.</h2>
+        <p>
+          EasyToll administrators manage users, toll passes, toll login access, approvals,
+          toll location details, and QR generation workflows from one web control layer.
+        </p>
+
+        <div class="admin-matrix">
+          <article>
+            <span class="metric">08</span>
+            <span class="metric-label">Active Toll Gates</span>
+          </article>
+          <article>
+            <span class="metric">24</span>
+            <span class="metric-label">Approved Users</span>
+          </article>
+          <article>
+            <span class="metric">35</span>
+            <span class="metric-label">QR Codes Generated</span>
+          </article>
+        </div>
+
+        <a href="#" class="btn btn-primary">Admin Login</a>
+      </div>
+
+      <div class="admin-panel glass-panel">
+        <div class="tab-row">
+          <button class="tab-button active">Admin</button>
+          <button class="tab-button">Users</button>
+          <button class="tab-button">Tolls</button>
+        </div>
+
+        <div class="admin-list">
+          <article class="admin-item">
+            <span class="admin-status success">Approved</span>
+            <div>
+              <span class="row-title">Toll Pass Approval</span>
+              <span class="row-detail">User ID: ETL-24012</span>
+            </div>
+          </article>
+
+          <article class="admin-item">
+            <span class="admin-status warning">Pending</span>
+            <div>
+              <span class="row-title">Gate Login Verification</span>
+              <span class="row-detail">Gate: NH-45 West Plaza</span>
+            </div>
+          </article>
+
+          <article class="admin-item">
+            <span class="admin-status info">QR Active</span>
+            <div>
+              <span class="row-title">Generate Toll QR Code</span>
+              <span class="row-detail">Route: Chennai–Madurai</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section tollgate-section">
+    <div class="container tollgate-layout">
+      <div class="scan-card">
+        <div class="scan-header">
+          <span class="icon-badge qr">
+            <svg viewBox="0 0 24 24">
+              <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h2v2h2v2h-4v-4h-2v4h-2v-2h2zM20 13h1v2h-1zM20 17h2v2h-2zM16 20h4v2h-4z" />
+            </svg>
+          </span>
+          <div>
+            <span class="label-text">Toll Gate User</span>
+            <h2>Scan & Verify</h2>
+          </div>
+          <span class="status-chip success">Online</span>
+        </div>
+
+        <div class="qr-display">
+          <div class="qr-square">
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+            <span></span><span></span><span></span><span></span>
+          </div>
+        </div>
+
+        <div class="scan-details">
+          <div>
+            <span class="row-title">Vehicle: TN 26 AS 7482</span>
+            <span class="row-detail">Pass ID: ET-8899</span>
+          </div>
+          <button class="btn btn-success btn-small">Verify QR</button>
+        </div>
+      </div>
+
+      <div class="gate-summary">
+        <div class="section-header compact-head">
+          <span class="section-kicker">Gate Operations</span>
+          <h2>Verification Flow</h2>
+        </div>
+        <ul class="process-list">
+          <li>
+            <span class="step-number">01</span>
+            <div>
+              <span class="row-title">Login toll gate console</span>
+              <span class="row-detail">Authenticate secure operator session</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">02</span>
+            <div>
+              <span class="row-title">Scan QR ticket</span>
+              <span class="row-detail">Read eTicket and toll pass QR code</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">03</span>
+            <div>
+              <span class="row-title">Verify toll pass ID</span>
+              <span class="row-detail">Confirm route and toll location</span>
+            </div>
+          </li>
+          <li>
+            <span class="step-number">04</span>
+            <div>
+              <span class="row-title">Update toll details</span>
+              <span class="row-detail">Record payment and route checkpoint</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-wrap">
+      <div>
+        <span class="section-kicker">Stay Ahead of Traffic</span>
+        <h2>Drive faster. Pay smarter.</h2>
+      </div>
+      <div class="cta-actions">
+        <a class="btn btn-primary" href="#">Create Account</a>
+        <a class="btn btn-outline-light" href="#">Explore Plans</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-layout">
+      <div>
+        <a href="#" class="brand footer-brand">
+          <span class="brand-icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 12h18M5 7h14M7 17h10" />
+            </svg>
+          </span>
+          <span>EasyToll</span>
+        </a>
+        <p class="footer-copy">Advanced online toll payment and verification platform.</p>
+      </div>
+
+      <div>
+        <span class="footer-title">Company</span>
+        <a href="#">About EasyToll</a>
+        <a href="#">Careers</a>
+        <a href="#">Support</a>
+      </div>
+
+      <div>
+        <span class="footer-title">Services</span>
+        <a href="#">eWallet</a>
+        <a href="#">eTicket</a>
+        <a href="#">QR Pass</a>
+      </div>
+
+      <div>
+        <span class="footer-title">Contact</span>
+        <a href="#">support@easytoll.io</a>
+        <a href="#">+1800 123 4567</a>
+        <span class="footer-copy">24/7 Toll Support</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

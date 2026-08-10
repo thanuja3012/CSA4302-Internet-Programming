@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VoteOnline | Secure Digital Elections</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2 2 7l10 5 10-5-10-5Zm-8 9 8 4 8-4M4 16l8 4 8-4" />
+          </svg>
+        </span>
+        <span class="brand-text">VoteOnline</span>
+      </a>
+
+      <nav class="main-nav">
+        <a class="active" href="#">Overview</a>
+        <a href="#election-status">Election</a>
+        <a href="#candidates">Candidates</a>
+        <a href="#admin-panel">Admin</a>
+        <a href="#user-panel">Voter</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="link-button muted">Help Desk</a>
+        <a href="#login" class="btn btn-primary">Access Portal</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="kicker">
+          <span class="pulse-dot"></span>
+          Election Systems: Online Voting Platform
+        </div>
+        <h1>Secure digital democracy for every eligible voter.</h1>
+        <p class="hero-text">
+          VoteOnline enables safe online voting, secure voter authentication,
+          transparent election monitoring, and instant result reporting for all stakeholders.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#login" class="btn btn-primary btn-large">Login to Vote</a>
+          <a href="#results" class="btn btn-ghost btn-large">View Results</a>
+        </div>
+
+        <div class="hero-stats">
+          <article>
+            <span class="stat-number">24,680</span>
+            <span class="stat-label">Registered Voters</span>
+          </article>
+          <article>
+            <span class="stat-number">05</span>
+            <span class="stat-label">Contesting Candidates</span>
+          </article>
+          <article>
+            <span class="stat-number">82%</span>
+            <span class="stat-label">Turnout Live</span>
+          </article>
+        </div>
+      </div>
+
+      <aside class="login-panel glass-panel">
+        <div class="panel-header">
+          <div>
+            <span class="small-label">Voter Access</span>
+            <h3>Secure Login</h3>
+          </div>
+          <span class="status-badge success">System Online</span>
+        </div>
+
+        <form class="login-form" id="login">
+          <label class="field-label" for="voter-id">Voter ID</label>
+          <div class="input-wrap">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8ZM4 21c.5-7 7-10 8-10s7.5 3 8 10" />
+              </svg>
+            </span>
+            <input id="voter-id" type="text" placeholder="VO-2026-0842" />
+          </div>
+
+          <label class="field-label" for="password">One-Time Password</label>
+          <div class="input-wrap">
+            <span class="icon-wrap">
+              <svg viewBox="0 0 24 24">
+                <path d="M7 11h10M7 15h7M5 5h14v14H5Z" />
+              </svg>
+            </span>
+            <input id="password" type="password" placeholder="••••••••" />
+          </div>
+
+          <div class="verify-row">
+            <button class="btn btn-secondary" type="button">Request OTP</button>
+            <a class="text-link" href="#">Need help?</a>
+          </div>
+
+          <button class="btn btn-primary btn-block btn-large" type="button" id="loginButton">
+            Verify & Enter Vote
+          </button>
+
+          <div class="security-note">
+            <span class="lock-icon">🔒</span>
+            <span>Multi-factor verification enabled</span>
+          </div>
+        </form>
+      </aside>
+    </div>
+  </section>
+
+  <section class="overview">
+    <div class="container section-grid">
+      <article class="metric-card highlight-card">
+        <div class="metric-top">
+          <span class="metric-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 21h18M6 21V9m6 12V3m6 18v-7" />
+            </svg>
+          </span>
+          <span class="trend positive">+12.4%</span>
+        </div>
+        <h3>Election Live Tracking</h3>
+        <p class="metric-value">2026 Local Election</p>
+        <div class="progress-block">
+          <div class="bar-shell">
+            <div class="bar-fill" style="width: 82%"></div>
+          </div>
+          <div class="bar-caption">
+            <span>Voter participation</span>
+            <span>82%</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="metric-card">
+        <div class="metric-top">
+          <span class="metric-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 11h18M5 7h14M7 15h10M8 19h8" />
+            </svg>
+          </span>
+          <span class="trend positive">Live</span>
+        </div>
+        <h3>Ward Allocation</h3>
+        <p class="metric-value">12 Wards Active</p>
+        <div class="small-detail">Voter lists synchronized</div>
+      </article>
+
+      <article class="metric-card">
+        <div class="metric-top">
+          <span class="metric-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 2 2 21h20Z" />
+            </svg>
+          </span>
+          <span class="trend neutral">Secure</span>
+        </div>
+        <h3>Data Protection</h3>
+        <p class="metric-value">AES-256 Encryption</p>
+        <div class="small-detail">Voter data secured</div>
+      </article>
+
+      <article class="metric-card">
+        <div class="metric-top">
+          <span class="metric-icon">
+            <svg viewBox="0 0 24 24">
+              <path d="M3 12h18M3 7h18M3 17h18" />
+            </svg>
+          </span>
+          <span class="trend positive">Open</span>
+        </div>
+        <h3>Election Results</h3>
+        <p class="metric-value">Awaiting Verification</p>
+        <div class="small-detail">Final result window: 15:00</div>
+      </article>
+    </div>
+  </section>
+
+  <section class="content-sections">
+    <div class="container content-grid">
+      <section class="panel main-panel" id="user-panel">
+        <div class="panel-header compact-header">
+          <div>
+            <span class="small-label">Voting Console</span>
+            <h2>Voter Module</h2>
+          </div>
+          <span class="status-badge success">Vote Access Enabled</span>
+        </div>
+
+        <div class="voting-layout">
+          <div class="voter-card">
+            <div class="profile-card">
+              <div class="avatar-ring">
+                <div class="avatar">
+                  <span>SA</span>
+                </div>
+              </div>
+              <div>
+                <p class="label-text">Voter ID</p>
+                <h4>VO-2026-0842</h4>
+                <p class="muted-text">South Ward - Precinct 05</p>
+              </div>
+            </div>
+
+            <div class="vote-status-grid">
+              <div>
+                <span class="mini-label">OTP Status</span>
+                <span class="ok-text">Verified</span>
+              </div>
+              <div>
+                <span class="mini-label">Voting History</span>
+                <span class="ok-text">No vote cast</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-card">
+            <div class="vote-card-header">
+              <div>
+                <span class="small-label">Step 01</span>
+                <h3>Choose Candidate</h3>
+              </div>
+              <span class="round-step">1 / 3</span>
+            </div>
+
+            <div class="candidate-list" id="candidates">
+              <article class="candidate-row selected">
+                <div class="candidate-info">
+                  <span class="candidate-avatar">AR</span>
+                  <div>
+                    <h4>Dr. Anika Rao</h4>
+                    <p>People’s Development Alliance</p>
+                    <span class="tag">Public Works & Health</span>
+                  </div>
+                </div>
+                <label class="radio-box">
+                  <input type="radio" name="candidate" checked />
+                  <span></span>
+                </label>
+              </article>
+
+              <article class="candidate-row">
+                <div class="candidate-info">
+                  <span class="candidate-avatar alt">SM</span>
+                  <div>
+                    <h4>Samir Mehta</h4>
+                    <p>Urban Growth Front</p>
+                    <span class="tag">Infrastructure & Finance</span>
+                  </div>
+                </div>
+                <label class="radio-box">
+                  <input type="radio" name="candidate" />
+                  <span></span>
+                </label>
+              </article>
+
+              <article class="candidate-row">
+                <div class="candidate-info">
+                  <span class="candidate-avatar blue">NL</span>
+                  <div>
+                    <h4>Neha Luthra</h4>
+                    <p>Citizen Action Movement</p>
+                    <span class="tag">Education & Social Care</span>
+                  </div>
+                </div>
+                <label class="radio-box">
+                  <input type="radio" name="candidate" />
+                  <span></span>
+                </label>
+              </article>
+            </div>
+
+            <div class="vote-actions">
+              <button type="button" class="btn btn-ghost">Cancel</button>
+              <button type="button" class="btn btn-primary" id="submitVote">
+                Submit Vote
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <aside class="panel right-panel" id="results">
+        <div class="panel-header compact-header">
+          <div>
+            <span class="small-label">Election Progress</span>
+            <h2>Real-time Results</h2>
+          </div>
+          <span class="icon-button">•••</span>
+        </div>
+
+        <div class="result-summary">
+          <div class="result-head">
+            <span class="round-orb">
+              <span></span>
+            </span>
+            <div>
+              <p class="big-number">4,763</p>
+              <span class="small-label">Votes Counted</span>
+            </div>
+          </div>
+
+          <div class="chart-card">
+            <div class="chart-chart">
+              <div class="chart-bar" style="height: 68%"></div>
+              <div class="chart-bar" style="height: 94%"></div>
+              <div class="chart-bar" style="height: 78%"></div>
+              <div class="chart-bar" style="height: 52%"></div>
+              <div class="chart-bar" style="height: 88%"></div>
+              <div class="chart-bar" style="height: 40%"></div>
+              <div class="chart-bar" style="height: 74%"></div>
+            </div>
+            <div class="bar-legend">
+              <span><i class="legend-dot one"></i> Anika Rao</span>
+              <span><i class="legend-dot two"></i> Samir Mehta</span>
+              <span><i class="legend-dot three"></i> Neha Luthra</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="admin-section">
+    <div class="container two-column">
+      <section class="panel" id="admin-panel">
+        <div class="panel-header compact-header">
+          <div>
+            <span class="small-label">Administration</span>
+            <h2>Admin Controls</h2>
+          </div>
+          <span class="status-badge warning">Election Setup</span>
+        </div>
+
+        <div class="admin-grid">
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10ZM5 21c.7-6.5 6.5-9 7-9s6.3 2.5 7 9" />
+              </svg>
+            </span>
+            <div>
+              <h4>Create Election Candidate</h4>
+              <p>Manage candidate profiles and party details.</p>
+            </div>
+          </article>
+
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 6h18M3 12h18M3 18h18" />
+              </svg>
+            </span>
+            <div>
+              <h4>Allocate election data</h4>
+              <p>Assign voter wards, polls, and election status.</p>
+            </div>
+          </article>
+
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 4h7v7H4Z M13 4h7v7h-7Z M4 13h7v7H4Z M13 13h7v7h-7Z" />
+              </svg>
+            </span>
+            <div>
+              <h4>Allocate user to ward</h4>
+              <p>Connect voter records to precise election wards.</p>
+            </div>
+          </article>
+
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M3 7h18M3 12h18M3 17h18" />
+              </svg>
+            </span>
+            <div>
+              <h4>Create Voter List</h4>
+              <p>Approve, import, and update active voter records.</p>
+            </div>
+          </article>
+
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M12 3 4 7v6c0 7 8 8 8 8s8-1 8-8V7Z" />
+              </svg>
+            </span>
+            <div>
+              <h4>Import Voter List</h4>
+              <p>Upload approved CSV and registry files securely.</p>
+            </div>
+          </article>
+
+          <article class="admin-task">
+            <span class="admin-icon">
+              <svg viewBox="0 0 24 24">
+                <path d="M4 19h16M6 16V8m6 8V5m6 11v-4" />
+              </svg>
+            </span>
+            <div>
+              <h4>Get Election Results</h4>
+              <p>Generate verification-ready result reports.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="panel election-status" id="election-status">
+        <div class="panel-header compact-header">
+          <div>
+            <span class="small-label">Election Timeline</span>
+            <h2>Voting Cycle</h2>
+          </div>
+          <span class="status-badge info">2026-05-12</span>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-step done">
+            <span class="timeline-dot"></span>
+            <div>
+              <span class="time-label">08:00 AM</span>
+              <h4>Voter Registration Closed</h4>
+              <p>All voter identity records verified.</p>
+            </div>
+          </article>
+
+          <article class="timeline-step done">
+            <span class="timeline-dot"></span>
+            <div>
+              <span class="time-label">10:00 AM</span>
+              <h4>Online Voting Open</h4>
+              <p>Voters can perform OTP authentication.</p>
+            </div>
+          </article>
+
+          <article class="timeline-step current">
+            <span class="timeline-dot"></span>
+            <div>
+              <span class="time-label">Now</span>
+              <h4>Active Vote Collection</h4>
+              <p>Counting and validation in progress.</p>
+            </div>
+          </article>
+
+          <article class="timeline-step">
+            <span class="timeline-dot"></span>
+            <div>
+              <span class="time-label">03:00 PM</span>
+              <h4>Voting Closes</h4>
+              <p>Final vote collection window opens.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container cta-grid">
+      <div>
+        <span class="small-label">Security Protocol</span>
+        <h2>Election Integrity Assurance</h2>
+        <p>
+          VoteOnline protects voter data with secure encryption,
+          identity verification, ballot locking, and tamper-resistant result reporting.
+        </p>
+      </div>
+      <div class="cta-actions">
+        <a href="#" class="btn btn-outline">Election Audit Log</a>
+        <a href="#" class="btn btn-primary">Download Compliance Report</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="brand footer-brand">
+        <span class="brand-icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 2 2 7l10 5 10-5-10-5Zm-8 9 8 4 8-4M4 16l8 4 8-4" />
+          </svg>
+        </span>
+        <span class="brand-text">VoteOnline</span>
+      </div>
+      <div class="footer-links">
+        <a href="#">Election Access</a>
+        <a href="#">Voter Support</a>
+        <a href="#">Election Rules</a>
+        <a href="#">Contact</a>
+      </div>
+      <span class="copyright">© 2026 VoteOnline</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

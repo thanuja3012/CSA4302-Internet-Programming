@@ -3,119 +3,612 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Campus Library Portal</title>
+  <title>Lumière Beauty Studio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="index.html">Campus Library</a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="user.html">Student</a>
-        <a href="admin.html">Admin</a>
-        <a href="#contact">Contact</a>
+  <header class="topbar">
+    <div class="container nav-wrapper">
+      <a href="" class="brand">
+        <span class="brand-icon">✧</span>
+        <span>Lumière</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="#services" class="active">Services</a>
+        <a href="#stylists">Stylists</a>
+        <a href="#calendar">Calendar</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#payments">Payments</a>
       </nav>
+
+      <div class="nav-actions">
+        <a href="#" class="login-link">Log in</a>
+        <a href="#booking" class="btn btn-primary">Book Appointment</a>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <div class="container hero-grid">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">
+          <span></span> Beauty Parlour Booking
+        </div>
+        <h1>Your next radiant beauty ritual starts here.</h1>
+        <p class="hero-text">
+          Discover tailored beauty services, meet your ideal stylist, and secure your preferred appointment time in minutes.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#booking" class="btn btn-primary btn-large">Book Your Visit</a>
+          <a href="#services" class="btn btn-ghost btn-large">Explore Services</a>
+        </div>
+
+        <div class="hero-stats">
+          <article>
+            <strong>24/7</strong>
+            <span>Online Booking</span>
+          </article>
+          <article>
+            <strong>25+</strong>
+            <span>Beauty Specialists</span>
+          </article>
+          <article>
+            <strong>4.9</strong>
+            <span>Client Rating</span>
+          </article>
+        </div>
+      </div>
+
+      <aside class="hero-panel glass-panel">
+        <div class="panel-header">
+          <div>
+            <span class="kicker">Today at Lumière</span>
+            <h3>Beauty Concierge</h3>
+          </div>
+          <span class="status-dot">Live</span>
+        </div>
+
+        <div class="booking-summary">
+          <div class="service-row">
+            <span class="icon-wrap">✂</span>
+            <div>
+              <span class="label">Selected Service</span>
+              <strong>Signature Bridal Glow</strong>
+            </div>
+            <span class="price">$160</span>
+          </div>
+
+          <div class="mini-calendar">
+            <div class="cal-top">
+              <span>Tuesday</span>
+              <span>Aug 10</span>
+            </div>
+            <div class="slots">
+              <button class="slot selected">09:30 AM</button>
+              <button class="slot">11:00 AM</button>
+              <button class="slot">02:15 PM</button>
+              <button class="slot">04:45 PM</button>
+            </div>
+          </div>
+
+          <div class="stylist-card">
+            <div class="avatar">AM</div>
+            <div>
+              <span class="label">Stylist</span>
+              <h4>Amelia Marais</h4>
+              <span class="rating-stars">★★★★★</span>
+            </div>
+            <button class="round-button">↗</button>
+          </div>
+
+          <a href="#booking" class="btn btn-primary full-width">Continue to Checkout</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="logos">
+    <div class="container small">
+      <span>Trusted by local clients</span>
+      <div class="logo-row">
+        <span>Beauty Ritual Club</span>
+        <span>Glow Studio</span>
+        <span>Wellness Network</span>
+        <span>Pure Spa</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section services" id="services">
+    <div class="container">
+      <div class="section-heading centered">
+        <span class="eyebrow"><span></span> Salon Menu</span>
+        <h2>Beauty services crafted for your glow.</h2>
+        <p>From everyday self-care to premium beauty experiences, each service includes beauty guidance, expert care, and flexible scheduling.</p>
+      </div>
+
+      <div class="service-cards">
+        <article class="service-card featured">
+          <div class="service-header">
+            <span class="icon-badge">✳</span>
+            <span class="tag">Signature</span>
+          </div>
+          <h3>Signature Facial Ritual</h3>
+          <p>Deep cleansing, skin analysis, facial massage, mask therapy, and a luminous finishing ritual.</p>
+          <div class="service-info">
+            <span>60 min</span>
+            <span class="price">$75</span>
+          </div>
+          <button class="btn btn-secondary">Select Service</button>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <span class="icon-badge">✂</span>
+            <span class="tag">Hair Studio</span>
+          </div>
+          <h3>Hair Styling & Finish</h3>
+          <p>Precision styling, soft gloss, hair shaping, volume styling, and a custom finish for any occasion.</p>
+          <div class="service-info">
+            <span>75 min</span>
+            <span class="price">$68</span>
+          </div>
+          <button class="btn btn-secondary">Select Service</button>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <span class="icon-badge">☼</span>
+            <span class="tag">Spa Therapy</span>
+          </div>
+          <h3>Luxury Body Polish</h3>
+          <p>Exfoliation, aromatherapy massage, hydration therapy, and body finishing for ultimate renewal.</p>
+          <div class="service-info">
+            <span>90 min</span>
+            <span class="price">$105</span>
+          </div>
+          <button class="btn btn-secondary">Select Service</button>
+        </article>
+
+        <article class="service-card">
+          <div class="service-header">
+            <span class="icon-badge">✎</span>
+            <span class="tag">Bridal</span>
+          </div>
+          <h3>Bridal Beauty Package</h3>
+          <p>Makeup, hair preparation, grooming session, and beauty planning for your most special day.</p>
+          <div class="service-info">
+            <span>Half Day</span>
+            <span class="price">$250</span>
+          </div>
+          <button class="btn btn-secondary">Select Service</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stylist-section" id="stylists">
+    <div class="container two-column">
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow"><span></span> Your Beauty Team</span>
+          <h2>Meet your beauty specialists.</h2>
+          <p>Lumière’s expert artists combine beauty technique, consultation, and care to help every guest feel confident.</p>
+        </div>
+        <div class="stylist-list">
+          <article class="stylist-row">
+            <div class="avatar large">AM</div>
+            <div>
+              <h3>Amelia Marais</h3>
+              <p>Skin Therapist · Bridal & Glow</p>
+              <span class="availability open">Available Today</span>
+            </div>
+            <a href="#booking" class="icon-link">Book</a>
+          </article>
+
+          <article class="stylist-row">
+            <div class="avatar large alt">SK</div>
+            <div>
+              <h3>Sofia Khan</h3>
+              <p>Hair Styling Specialist</p>
+              <span class="availability busy">Next Slots 2 PM</span>
+            </div>
+            <a href="#booking" class="icon-link">Book</a>
+          </article>
+
+          <article class="stylist-row">
+            <div class="avatar large warm">RM</div>
+            <div>
+              <h3>Rose Mira</h3>
+              <p>Beauty Artist · Spa Treatments</p>
+              <span class="availability open">Available 10:30 AM</span>
+            </div>
+            <a href="#booking" class="icon-link">Book</a>
+          </article>
+        </div>
+      </div>
+
+      <aside class="experience-panel glass-panel">
+        <div class="panel-header compact">
+          <div>
+            <span class="kicker">Beauty Profile</span>
+            <h3>Client Experience</h3>
+          </div>
+          <span class="icon-button">♡</span>
+        </div>
+
+        <div class="wellness-score">
+          <div>
+            <span class="score">96%</span>
+            <span class="label">Care Match</span>
+          </div>
+          <div class="score-bar">
+            <div style="width:96%"></div>
+          </div>
+        </div>
+
+        <div class="mini-features">
+          <article>
+            <span class="icon-wrap soft">✓</span>
+            <div>
+              <h4>Skin Consultation</h4>
+              <p>Beauty plan based on your routine and goals.</p>
+            </div>
+          </article>
+          <article>
+            <span class="icon-wrap soft">☏</span>
+            <div>
+              <h4>Reminder Support</h4>
+              <p>Appointment confirmations and reminders by email or SMS.</p>
+            </div>
+          </article>
+          <article>
+            <span class="icon-wrap soft">✦</span>
+            <div>
+              <h4>Beauty Rewards</h4>
+              <p>VIP points, seasonal offers, and loyalty care.</p>
+            </div>
+          </article>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section calendar-section" id="calendar">
+    <div class="container">
+      <div class="section-heading two-row">
         <div>
-          <h1>Library management for students and campus staff</h1>
-          <p>Search books, manage borrowing, check fines, and keep material organized by year and semester.</p>
-          <div class="hero-actions">
-            <a class="btn" href="user.html">Student Dashboard</a>
-            <a class="btn btn-secondary" href="admin.html">Admin Dashboard</a>
+          <span class="eyebrow"><span></span> Reservations Calendar</span>
+          <h2>Plan your visit around real-time availability.</h2>
+        </div>
+        <a href="#booking" class="btn btn-secondary">Add Reservation</a>
+      </div>
+
+      <div class="calendar-layout">
+        <div class="calendar-panel glass-panel">
+          <div class="calendar-head">
+            <button class="round-button">‹</button>
+            <strong>August 2026</strong>
+            <button class="round-button">›</button>
+          </div>
+          <div class="calendar-grid">
+            <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span>
+            <span class="muted">27</span><span class="muted">28</span><span class="muted">29</span><span class="muted">30</span><span class="muted">31</span><span>1</span><span>2</span>
+            <span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span>
+            <span class="active-c">10</span><span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span>
+            <span>17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span>
+            <span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span><span>30</span>
           </div>
         </div>
-        <div class="hero-card">
-          <h2>Quick search</h2>
-          <p>Type a book title, author, semester, or year to find resources immediately.</p>
-          <div class="search-box">
-            <input id="searchInput" type="search" placeholder="Search books by title or author" />
-            <button id="searchButton">Search</button>
+
+        <div class="reservation-summary">
+          <div class="panel-header compact">
+            <div>
+              <span class="kicker">Daily Insights</span>
+              <h3>Tuesday, Aug 10</h3>
+            </div>
+            <span class="status-dot small">5 Slots</span>
+          </div>
+          <ul class="detail-list">
+            <li>
+              <span class="bullet"></span>
+              <div>
+                <strong>09:30 AM - Facial Ritual</strong>
+                <small>Amelia Marais · Client: Ava R.</small>
+              </div>
+              <span class="paid">Confirmed</span>
+            </li>
+            <li>
+              <span class="bullet"></span>
+              <div>
+                <strong>11:00 AM - Hair Styling</strong>
+                <small>Sofia Khan · Client: Maya S.</small>
+              </div>
+              <span class="partial">Deposit</span>
+            </li>
+            <li>
+              <span class="bullet"></span>
+              <div>
+                <strong>02:15 PM - Bridal Package</strong>
+                <small>Rose Mira · Client: Lily M.</small>
+              </div>
+              <span class="locked">Locked</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section dashboard-section" id="dashboard">
+    <div class="container dashboard-grid">
+      <div class="dashboard-card">
+        <div class="section-heading compact">
+          <span class="eyebrow"><span></span> Customer Dashboard</span>
+          <h2>My beauty account</h2>
+        </div>
+        <div class="account-highlight">
+          <div class="avatar large">AR</div>
+          <div>
+            <h3>Avery Robinson</h3>
+            <span class="label">Beauty Club Member</span>
+          </div>
+          <a href="#" class="btn btn-ghost">Edit Profile</a>
+        </div>
+
+        <div class="account-panels">
+          <article>
+            <span class="kicker">Upcoming Reservations</span>
+            <h4>Signature Facial Ritual</h4>
+            <p>Tuesday, Aug 10 · 09:30 AM</p>
+            <span class="status dot-green">Confirmed</span>
+          </article>
+          <article>
+            <span class="kicker">Reservations History</span>
+            <h4>5 past appointments</h4>
+            <p>Beauty therapy and hair styling visits</p>
+            <span class="status">View History</span>
+          </article>
+          <article>
+            <span class="kicker">Personal Data</span>
+            <h4>Preferences Saved</h4>
+            <p>Preferred stylist: Amelia Marais</p>
+            <span class="status">Profile Complete</span>
+          </article>
+        </div>
+      </div>
+
+      <div class="dashboard-card admin-card">
+        <div class="section-heading compact">
+          <span class="eyebrow"><span></span> Salon Manager Panel</span>
+          <h2>Operations</h2>
+        </div>
+        <div class="admin-metrics">
+          <article>
+            <span class="metric">08</span>
+            <small>Upcoming Reservation</small>
+          </article>
+          <article>
+            <span class="metric">12</span>
+            <small>Available Slots</small>
+          </article>
+          <article>
+            <span class="metric">03</span>
+            <small>Unpaid Reservations</small>
+          </article>
+        </div>
+        <div class="activity-list">
+          <div><span class="bullet"></span><div><strong>New reservation</strong><small>Signature Facial · 12:00 PM</small></div></div>
+          <div><span class="bullet"></span><div><strong>Reminder sent</strong><small>Avery Robinson · 09:30 AM</small></div></div>
+          <div><span class="bullet"></span><div><strong>Feedback request</strong><small>Beauty experience survey</small></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section payments" id="payments">
+    <div class="container payment-grid">
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow"><span></span> Online Payments</span>
+          <h2>Secure, flexible booking checkout.</h2>
+          <p>Choose full payment or a partial deposit. Pay securely through Stripe, PayPal, and connected payment integrations.</p>
+        </div>
+        <div class="payment-options">
+          <div class="option-card">
+            <span class="icon-badge">✓</span>
+            <div>
+              <h4>Full Payment</h4>
+              <p>Confirm your appointment instantly.</p>
+            </div>
+          </div>
+          <div class="option-card">
+            <span class="icon-badge">☰</span>
+            <div>
+              <h4>Partial Deposit</h4>
+              <p>Reserve the slot and complete balance later.</p>
+            </div>
+          </div>
+          <div class="option-card">
+            <span class="icon-badge">◌</span>
+            <div>
+              <h4>Stripe or PayPal</h4>
+              <p>Instant gateway supports trusted card and wallet checkout.</p>
+            </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <section class="features container">
-      <div class="feature-card">
-        <h3>Catalog</h3>
-        <p>Filter books by title, author, course, year, and semester.</p>
-      </div>
-      <div class="feature-card">
-        <h3>User accounts</h3>
-        <p>Student login, registration, borrow history, fine tracking, and profile management.</p>
-      </div>
-      <div class="feature-card">
-        <h3>Admin dashboard</h3>
-        <p>Add, update, delete books, issue and return items, and manage inventory with ease.</p>
-      </div>
-    </section>
+      <aside class="checkout-panel glass-panel">
+        <div class="panel-header compact">
+          <div>
+            <span class="kicker">Booking Summary</span>
+            <h3>Appointment</h3>
+          </div>
+          <span class="price">$160</span>
+        </div>
+        <div class="checkout-lines">
+          <div>
+            <span>Signature Facial Ritual</span>
+            <span>$75</span>
+          </div>
+          <div>
+            <span>Stylist Consultation</span>
+            <span>$20</span>
+          </div>
+          <div>
+            <span>Service Tax</span>
+            <span>$10</span>
+          </div>
+        </div>
+        <div class="divider"></div>
+        <div class="checkout-total">
+          <span>Total Due</span>
+          <strong>$105</strong>
+        </div>
+        <button class="btn btn-primary full-width">Pay Securely</button>
+      </aside>
+    </div>
+  </section>
 
-    <section class="catalog container">
-      <div class="section-header">
-        <h2>Library Collection</h2>
-        <p>Browse the latest books, textbooks, and semester material.</p>
+  <section class="section testimonials">
+    <div class="container testimonial-layout">
+      <div class="section-heading">
+        <span class="eyebrow"><span></span> Client Love</span>
+        <h2>Beauty stories from our guests.</h2>
       </div>
-      <div class="catalog-actions">
-        <label>
-          Filter by year:
-          <select id="yearFilter">
-            <option value="all">All</option>
-            <option value="2024">2024</option>
-            <option value="2023">2023</option>
-            <option value="2022">2022</option>
-            <option value="2021">2021</option>
+      <div class="testimonials-grid">
+        <article class="quote-card">
+          <div class="stars">★★★★★</div>
+          <p>“The booking experience was smooth and the stylist matched my beauty goals perfectly.”</p>
+          <span class="author">- Maya L.</span>
+        </article>
+        <article class="quote-card highlighted">
+          <div class="stars">★★★★★</div>
+          <p>“I booked my facial and received reminders, payment confirmation, and a beautiful care plan.”</p>
+          <span class="author">- Ava R.</span>
+        </article>
+        <article class="quote-card">
+          <div class="stars">★★★★★</div>
+          <p>“The calendar and live appointment overview let me manage everything from my dashboard.”</p>
+          <span class="author">- Sofia C.</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band">
+    <div class="container cta-content">
+      <div>
+        <span class="eyebrow"><span></span> Join the Lumière Club</span>
+        <h2>Reserve your next beauty ritual.</h2>
+      </div>
+      <a href="#booking" class="btn btn-light btn-large">Book a Beauty Session</a>
+    </div>
+  </section>
+
+  <section class="section booking-section" id="booking">
+    <div class="container booking-form-layout">
+      <div>
+        <div class="section-heading">
+          <span class="eyebrow"><span></span> Reserve Online</span>
+          <h2>Book your appointment.</h2>
+          <p>Choose a service, stylist, date, and time that fits your schedule.</p>
+        </div>
+      </div>
+
+      <form class="booking-form glass-panel">
+        <div class="form-row">
+          <label for="service">Service</label>
+          <select id="service">
+            <option>Signature Facial Ritual</option>
+            <option>Hair Styling & Finish</option>
+            <option>Luxury Body Polish</option>
+            <option>Bridal Beauty Package</option>
           </select>
-        </label>
-        <label>
-          Semester:
-          <select id="semesterFilter">
-            <option value="all">All</option>
-            <option value="Spring">Spring</option>
-            <option value="Summer">Summer</option>
-            <option value="Fall">Fall</option>
-          </select>
-        </label>
-      </div>
-      <div id="bookList" class="book-grid"></div>
-      <div id="noResults" class="empty-state hidden">No books match your search. Try another keyword.</div>
-    </section>
+        </div>
 
-    <section id="contact" class="contact container">
-      <div class="section-header">
-        <h2>Contact the library</h2>
-        <p>Send a message for support, lost book requests, or material updates.</p>
-      </div>
-      <form class="contact-form">
-        <div class="form-row">
-          <label for="name">Name</label>
-          <input id="name" type="text" placeholder="Your name" />
+        <div class="form-row two-col">
+          <div>
+            <label for="stylist">Stylist</label>
+            <select id="stylist">
+              <option>Amelia Marais</option>
+              <option>Sofia Khan</option>
+              <option>Rose Mira</option>
+            </select>
+          </div>
+          <div>
+            <label for="payment">Payment Method</label>
+            <select id="payment">
+              <option>Stripe</option>
+              <option>PayPal</option>
+              <option>Card Payment</option>
+            </select>
+          </div>
         </div>
-        <div class="form-row">
-          <label for="email">Email</label>
-          <input id="email" type="email" placeholder="Your email" />
+
+        <div class="form-row two-col">
+          <div>
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" value="2026-08-10" />
+          </div>
+          <div>
+            <label for="time">Preferred Time</label>
+            <select id="time">
+              <option>09:30 AM</option>
+              <option>11:00 AM</option>
+              <option>02:15 PM</option>
+              <option>04:45 PM</option>
+            </select>
+          </div>
         </div>
+
         <div class="form-row">
-          <label for="message">Message</label>
-          <textarea id="message" rows="4" placeholder="How can we help?"></textarea>
+          <label for="notes">Beauty Notes</label>
+          <textarea id="notes" rows="4" placeholder="Your beauty goals, allergies, or style notes..."></textarea>
         </div>
-        <button type="button" class="btn" onclick="submitContact()">Send message</button>
+
+        <button type="button" class="btn btn-primary full-width">Request Reservation</button>
       </form>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>Campus Library Portal &copy; 2026</p>
-      <p>Designed for librarians, students, and campus managers.</p>
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="" class="brand footer-brand">
+          <span class="brand-icon">✧</span>
+          <span>Lumière</span>
+        </a>
+        <p class="footer-copy">Beauty workspace for modern salons, specialists, and self-care rituals.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="#">Facial Rituals</a>
+        <a href="#">Hair Styling</a>
+        <a href="#">Spa Therapy</a>
+        <a href="#">Bridal Packages</a>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#">About Us</a>
+        <a href="#">Appointments</a>
+        <a href="#">Payments</a>
+        <a href="#">Support</a>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <p>28 Glow Avenue<br />Beauty District<br />Open daily 09:00 - 21:00</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Lumière Beauty Studio. All rights reserved.</span>
+      <span>Privacy · Terms · Accessibility</span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

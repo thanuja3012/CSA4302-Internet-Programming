@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StyleHub | Fashion Boutique</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header class="top-header">
+        <div class="container nav-wrapper">
+            <div class="brand">
+                <span class="brand-icon">S</span>
+                <span class="brand-text">StyleHub</span>
+            </div>
+
+            <nav class="main-nav" aria-label="Primary navigation">
+                <a href="#" class="active">Home</a>
+                <a href="#collections">Collections</a>
+                <a href="#shop">Shop</a>
+                <a href="#style-guide">Style Guide</a>
+                <a href="#admin">Admin</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button class="icon-button" aria-label="Wishlist">
+                    <span>♡</span>
+                    <span class="badge">4</span>
+                </button>
+                <button class="cart-button" id="cartToggle">
+                    <span>Cart</span>
+                    <span class="cart-count" id="cartCount">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-copy">
+                <span class="kicker">StyleHub Collections</span>
+                <h1>Fashion that moves with you.</h1>
+                <p class="hero-text">
+                    Discover fresh wardrobes for every moment — from workday polish to seasonal edits and everyday essentials.
+                </p>
+
+                <div class="hero-actions">
+                    <a class="primary-button" href="#shop">Shop the Edit</a>
+                    <a class="secondary-button" href="#collections">Explore Categories</a>
+                </div>
+
+                <div class="hero-stats">
+                    <article>
+                        <span class="stat-number">24hr</span>
+                        <span class="stat-label">Express delivery</span>
+                    </article>
+                    <article>
+                        <span class="stat-number">40K+</span>
+                        <span class="stat-label">Happy customers</span>
+                    </article>
+                    <article>
+                        <span class="stat-number">98%</span>
+                        <span class="stat-label">Satisfaction score</span>
+                    </article>
+                </div>
+            </div>
+
+            <aside class="hero-panel">
+                <div class="style-card trend-card">
+                    <div class="panel-header">
+                        <span class="label">Trending Now</span>
+                        <span class="tag">Live Sale</span>
+                    </div>
+                    <div class="image-stack">
+                        <div class="image-tile main-image">
+                            <div class="image-bg outfit-one"></div>
+                        </div>
+                        <div class="image-tile floating-card">
+                            <span class="sale-title">The Weekend Edit</span>
+                            <span class="sale-price">Up to 40% off</span>
+                        </div>
+                    </div>
+                    <div class="panel-footer">
+                        <span>New arrivals</span>
+                        <span class="arrow">→</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <section class="categories-strip">
+        <div class="container category-strip-content">
+            <article class="category-tile selected">
+                <span class="icon">👗</span>
+                <div>
+                    <h3>Women</h3>
+                    <small>1,248 products</small>
+                </div>
+            </article>
+            <article class="category-tile">
+                <span class="icon">👔</span>
+                <div>
+                    <h3>Men</h3>
+                    <small>984 products</small>
+                </div>
+            </article>
+            <article class="category-tile">
+                <span class="icon">🧒</span>
+                <div>
+                    <h3>Kids</h3>
+                    <small>728 products</small>
+                </div>
+            </article>
+            <article class="category-tile">
+                <span class="icon">👟</span>
+                <div>
+                    <h3>Footwear</h3>
+                    <small>612 products</small>
+                </div>
+            </article>
+            <article class="category-tile">
+                <span class="icon">🎒</span>
+                <div>
+                    <h3>Accessories</h3>
+                    <small>543 products</small>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <section class="section shop-section" id="shop">
+            <div class="container shop-layout">
+                <aside class="filters-panel">
+                    <div class="panel-title">
+                        <span>Shop by Category</span>
+                        <span class="reset-link">Reset</span>
+                    </div>
+
+                    <div class="filter-block">
+                        <h3>Categories</h3>
+                        <ul class="filter-list" id="categoryFilters">
+                            <li><label><input type="radio" name="category" value="All" checked /> All Categories</label></li>
+                            <li><label><input type="radio" name="category" value="Women" /> Women</label></li>
+                            <li><label><input type="radio" name="category" value="Men" /> Men</label></li>
+                            <li><label><input type="radio" name="category" value="Kids" /> Kids</label></li>
+                            <li><label><input type="radio" name="category" value="Footwear" /> Footwear</label></li>
+                            <li><label><input type="radio" name="category" value="Accessories" /> Accessories</label></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-block">
+                        <h3>Subcategories</h3>
+                        <ul class="sub-list">
+                            <li><a href="#">Casual Wear</a></li>
+                            <li><a href="#">Formal Attire</a></li>
+                            <li><a href="#">Seasonal Collections</a></li>
+                            <li><a href="#">Street Style</a></li>
+                            <li><a href="#">Luxury Essentials</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="filter-block">
+                        <h3>Price Range</h3>
+                        <input type="range" class="price-range" />
+                        <div class="price-values">
+                            <span>$20</span>
+                            <span>$250+</span>
+                        </div>
+                    </div>
+
+                    <div class="filter-block">
+                        <h3>Customer Rating</h3>
+                        <div class="rating-options">
+                            <span>★★★★☆</span>
+                            <span>4.0 & up</span>
+                        </div>
+                    </div>
+
+                    <button class="apply-button">Apply Filters</button>
+                </aside>
+
+                <section class="catalogue-area">
+                    <div class="section-head">
+                        <div>
+                            <span class="kicker">StyleHub Retail Network</span>
+                            <h2>Latest Fashion Finds</h2>
+                        </div>
+                        <div class="search-panel">
+                            <label class="search-box">
+                                <span aria-hidden="true">⌕</span>
+                                <input type="text" id="searchInput" placeholder="Search products" />
+                            </label>
+                            <select id="sortSelect">
+                                <option value="featured">Featured</option>
+                                <option value="price-low">Price low to high</option>
+                                <option value="price-high">Price high to low</option>
+                                <option value="rating">Top rated</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <section class="collections-banner" id="collections">
+                        <article class="collection-card highlight">
+                            <span class="season-label">Spring Capsule</span>
+                            <h3>Soft Layers, Strong Statements</h3>
+                            <p>Minimal silhouettes with elevated textures.</p>
+                            <a href="#" class="text-link">Shop collection</a>
+                        </article>
+                        <article class="collection-card muted">
+                            <span class="season-label">Weekend Essentials</span>
+                            <h3>Relaxed Confidence</h3>
+                            <p>Cruise-ready styles for seamless days out.</p>
+                            <a href="#" class="text-link">View looks</a>
+                        </article>
+                        <article class="collection-card muted">
+                            <span class="season-label">Formal Edit</span>
+                            <h3>Sharp & Modern</h3>
+                            <p>Workwear favourites designed for the season.</p>
+                            <a href="#" class="text-link">Shop formal</a>
+                        </article>
+                    </section>
+
+                    <section class="product-grid" id="productGrid"></section>
+                </section>
+            </div>
+        </section>
+
+        <section class="style-guide" id="style-guide">
+            <div class="container guide-layout">
+                <div>
+                    <span class="kicker">Style Guide</span>
+                    <h2>Build your wardrobe story.</h2>
+                    <p class="lead">
+                        Discover smart outfits, layered accessories, and recommendations tailored to your fashion calendar.
+                    </p>
+                    <div class="recommendations">
+                        <article>
+                            <span class="icon-round">01</span>
+                            <div>
+                                <h3>Capsule Planner</h3>
+                                <p>Build a wardrobe around versatile staples and purposeful finishing pieces.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <span class="icon-round">02</span>
+                            <div>
+                                <h3>Personal Recommendations</h3>
+                                <p>Receive style picks based on your browsing behaviour and seasonal requirements.</p>
+                            </div>
+                        </article>
+                        <article>
+                            <span class="icon-round">03</span>
+                            <div>
+                                <h3>Size Guide</h3>
+                                <p>Find fit confidence with detailed product fit and styling guidance.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                <aside class="guide-panel">
+                    <div class="lookbook">
+                        <span class="status-dot"></span>
+                        <div>
+                            <span class="mini-label">Today’s style note</span>
+                            <h3>Soft tailoring</h3>
+                            <p>Pair a refined white shirt with wide-leg denim and leather accessories.</p>
+                        </div>
+                    </div>
+                    <button class="primary-button full-button">Get Style Recommendations</button>
+                </aside>
+            </div>
+        </section>
+
+        <section class="admin-section" id="admin">
+            <div class="container admin-layout">
+                <div class="admin-header">
+                    <div>
+                        <span class="kicker">Admin Command</span>
+                        <h2>Retail Management Workspace</h2>
+                    </div>
+                    <button class="primary-button small-button">+ Add Product</button>
+                </div>
+
+                <div class="admin-grid">
+                    <article class="admin-card">
+                        <span class="admin-icon">📦</span>
+                        <div>
+                            <span class="admin-label">Catalogue Items</span>
+                            <span class="admin-number">236</span>
+                        </div>
+                    </article>
+                    <article class="admin-card">
+                        <span class="admin-icon">🧾</span>
+                        <div>
+                            <span class="admin-label">Orders</span>
+                            <span class="admin-number">34</span>
+                        </div>
+                    </article>
+                    <article class="admin-card">
+                        <span class="admin-icon">👥</span>
+                        <div>
+                            <span class="admin-label">Customers</span>
+                            <span class="admin-number">1,284</span>
+                        </div>
+                    </article>
+                    <article class="admin-card">
+                        <span class="admin-icon">⏱</span>
+                        <div>
+                            <span class="admin-label">Live Orders</span>
+                            <span class="admin-number">08</span>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Availability</th>
+                                <th>Status</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Urban Twist Blazer</td>
+                                <td>Women / Formal Attire</td>
+                                <td>$168</td>
+                                <td>In stock</td>
+                                <td>Published</td>
+                                <td><button class="row-button">Edit</button> <button class="row-button delete">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td>Everyday Knit Hoodie</td>
+                                <td>Men / Casual Wear</td>
+                                <td>$86</td>
+                                <td>Low stock</td>
+                                <td>Published</td>
+                                <td><button class="row-button">Edit</button> <button class="row-button delete">Remove</button></td>
+                            </tr>
+                            <tr>
+                                <td>Mini Explorer Backpack</td>
+                                <td>Accessories</td>
+                                <td>$54</td>
+                                <td>In stock</td>
+                                <td>Published</td>
+                                <td><button class="row-button">Edit</button> <button class="row-button delete">Remove</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <aside class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <div>
+                <span class="kicker">Shopping bag</span>
+                <h3>Your Cart</h3>
+            </div>
+            <button class="close-cart" id="closeCart">×</button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your shopping bag is empty.</p>
+        </div>
+        <div class="cart-summary">
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-button">Checkout Securely</button>
+        </div>
+    </aside>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <div class="brand footer-brand">
+                    <span class="brand-icon">S</span>
+                    <span class="brand-text">StyleHub</span>
+                </div>
+                <p class="footer-text">Fashion for every wardrobe, every story.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">About</a>
+                <a href="#">Shipping</a>
+                <a href="#">Returns</a>
+                <a href="#">Customer Care</a>
+            </div>
+            <div class="newsletter">
+                <span>Join the style list</span>
+                <div class="newsletter-form">
+                    <input type="email" placeholder="Email address" />
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

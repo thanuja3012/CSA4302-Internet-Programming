@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#" class="brand">
+        <span class="brand-icon">⌂</span>
+        <span class="brand-text">Home Finder</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="#" class="active">Home</a>
+        <a href="#properties">Properties</a>
+        <a href="#search">Search</a>
+        <a href="#agents">Agents</a>
+        <a href="#valuation">Valuation</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn btn-outline" id="loginToggle">Login</button>
+        <button class="btn btn-primary">Post Property</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Neighborhood Intelligence</div>
+        <h1>Find a place that feels like home.</h1>
+        <p class="sub-copy">Search verified homes, land, apartments, and commercial spaces that fit your budget and daily lifestyle.</p>
+
+        <div class="hero-actions">
+          <a href="#search" class="btn btn-primary btn-large">Start Search</a>
+          <a href="#valuation" class="btn btn-ghost btn-large">Free Valuation</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <span class="stat-number">2,846</span>
+            <span class="stat-label">Active Listings</span>
+          </div>
+          <div>
+            <span class="stat-number">38</span>
+            <span class="stat-label">Local Agents</span>
+          </div>
+          <div>
+            <span class="stat-number">12K+</span>
+            <span class="stat-label">Happy Customers</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero-panel glass-panel">
+        <div class="panel-top">
+          <div>
+            <span class="kicker">Market Pulse</span>
+            <h3>Today’s Snapshot</h3>
+          </div>
+          <span class="status-dot">Live</span>
+        </div>
+
+        <div class="market-card">
+          <div class="property-image">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80" alt="" />
+            <span class="image-badge">For Sale</span>
+          </div>
+          <div class="market-info">
+            <div class="price-row">
+              <div>
+                <span class="label">Oakridge Residence</span>
+                <h3>$482,900</h3>
+              </div>
+              <span class="tag success">+8.4% YoY</span>
+            </div>
+            <div class="mini-icons">
+              <span>3 Beds</span>
+              <span>2 Bath</span>
+              <span>2,145 sqft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="quick-grid">
+          <div>
+            <span class="quick-label">Average Home Value</span>
+            <span class="quick-value">$624K</span>
+          </div>
+          <div>
+            <span class="quick-label">Interest Rate</span>
+            <span class="quick-value">6.28%</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="partners">
+    <div class="container partner-row">
+      <div class="partner-title">Featured in</div>
+      <div class="partner-items">
+        <span>City Estates</span>
+        <span>Urban Living</span>
+        <span>Greenline Homes</span>
+        <span>Mortgage Weekly</span>
+        <span>Home Review</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="search-section" id="search">
+    <div class="container search-layout">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">Home Finder Search</span>
+          <h2>Find your next address</h2>
+        </div>
+        <button class="btn btn-soft">Advanced Filters</button>
+      </div>
+
+      <div class="search-form-card glass-panel">
+        <div class="form-top">
+          <div class="search-tabs">
+            <button class="tab-button active" type="button">Buy</button>
+            <button class="tab-button" type="button">Rent</button>
+            <button class="tab-button" type="button">Commercial</button>
+          </div>
+          <button class="icon-button">☰</button>
+        </div>
+
+        <div class="search-form-grid">
+          <div class="form-field">
+            <label for="city">Location</label>
+            <select id="city">
+              <option>San Jose, CA</option>
+              <option>Downtown Austin</option>
+              <option>Brooklyn, NY</option>
+              <option>Atlanta, GA</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="propertyType">Property Type</label>
+            <select id="propertyType">
+              <option>House</option>
+              <option>Apartment</option>
+              <option>Land</option>
+              <option>Office</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="budget">Budget Range</label>
+            <select id="budget">
+              <option>$300k - $500k</option>
+              <option>$500k - $800k</option>
+              <option>$800k - $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="beds">Bedrooms</label>
+            <select id="beds">
+              <option>Any</option>
+              <option>1+ bedroom</option>
+              <option>2+ bedrooms</option>
+              <option>3+ bedrooms</option>
+              <option>4+ bedrooms</option>
+            </select>
+          </div>
+          <div class="form-field form-field-wide">
+            <label for="amenities">Amenities</label>
+            <select id="amenities">
+              <option>Near School, Parking</option>
+              <option>Pool, Gym, Parking</option>
+              <option>Garden, Smart Home</option>
+              <option>Pet Friendly</option>
+            </select>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary search-button" id="searchButton">Search Homes</button>
+            <button class="btn btn-outline" id="saveCriteria">Save Criteria</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="featured-properties" id="properties">
+    <div class="container">
+      <div class="section-heading split-heading">
+        <div>
+          <span class="eyebrow">Latest Properties</span>
+          <h2>Featured listings</h2>
+        </div>
+        <div class="view-controls">
+          <button class="btn btn-icon">←</button>
+          <button class="btn btn-icon">→</button>
+        </div>
+      </div>
+
+      <div class="property-grid">
+        <article class="property-card">
+          <div class="property-card-image">
+            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&q=80" alt="" />
+            <span class="listing-status">For Sale</span>
+            <button class="heart">♥</button>
+          </div>
+          <div class="card-content">
+            <div class="card-head">
+              <div>
+                <span class="city">San Jose, CA</span>
+                <h3>Oakridge Manor</h3>
+              </div>
+              <span class="price">$482,900</span>
+            </div>
+            <div class="property-specs">
+              <span>3 Beds</span>
+              <span>2 Baths</span>
+              <span>2,145 sqft</span>
+            </div>
+            <div class="card-footer">
+              <span class="agent-name">Oakridge Realty</span>
+              <button class="btn btn-text">Schedule Viewing</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card featured-card">
+          <div class="property-card-image">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="" />
+            <span class="listing-status">New</span>
+            <button class="heart">♥</button>
+          </div>
+          <div class="card-content">
+            <div class="card-head">
+              <div>
+                <span class="city">Downtown Austin</span>
+                <h3>Modern Skyline Loft</h3>
+              </div>
+              <span class="price">$325,000</span>
+            </div>
+            <div class="property-specs">
+              <span>2 Beds</span>
+              <span>2 Baths</span>
+              <span>1,150 sqft</span>
+            </div>
+            <div class="card-footer">
+              <span class="agent-name">Urban Nest Co.</span>
+              <button class="btn btn-text">Schedule Viewing</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="property-card">
+          <div class="property-card-image">
+            <img src="https://images.unsplash.com/photo-1600566752355-35792b379888?auto=format&fit=crop&q=80" alt="" />
+            <span class="listing-status">For Rent</span>
+            <button class="heart">♥</button>
+          </div>
+          <div class="card-content">
+            <div class="card-head">
+              <div>
+                <span class="city">Brooklyn, NY</span>
+                <h3>Greenline Townhome</h3>
+              </div>
+              <span class="price">$2,850/mo</span>
+            </div>
+            <div class="property-specs">
+              <span>2 Beds</span>
+              <span>2 Baths</span>
+              <span>1,780 sqft</span>
+            </div>
+            <div class="card-footer">
+              <span class="agent-name">Greenline Realty</span>
+              <button class="btn btn-text">Schedule Viewing</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="map-section">
+    <div class="container map-layout">
+      <div class="map-copy">
+        <span class="eyebrow">Area Intelligence</span>
+        <h2>Explore neighborhoods on map</h2>
+        <p>Locate properties in the right community with local insights, nearby landmarks, schools, transport routes, and search intensity.</p>
+        <div class="map-facts">
+          <div>
+            <span class="fact-number">12</span>
+            <span class="fact-label">Nearby Schools</span>
+          </div>
+          <div>
+            <span class="fact-number">4.7 mi</span>
+            <span class="fact-label">Transit Access</span>
+          </div>
+          <div>
+            <span class="fact-number">24</span>
+            <span class="fact-label">Local Amenities</span>
+          </div>
+        </div>
+        <button class="btn btn-primary">View Map</button>
+      </div>
+
+      <div class="map-panel glass-panel">
+        <div class="map-header">
+          <span>San Jose Area Map</span>
+          <span class="map-badge">Live Map</span>
+        </div>
+        <div class="map-area">
+          <div class="map-grid"></div>
+          <div class="map-marker one">$482K</div>
+          <div class="map-marker two">$360K</div>
+          <div class="map-marker three">$620K</div>
+          <div class="map-road road-one"></div>
+          <div class="map-road road-two"></div>
+          <div class="map-road road-three"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="container service-grid">
+      <article class="service-card highlighted">
+        <span class="icon-bg">♣</span>
+        <h3>Mortgage Calculator</h3>
+        <p>Compare monthly payments and estimate your affordability before you shortlist a property.</p>
+        <a href="#valuation" class="text-link">Calculate now</a>
+      </article>
+
+      <article class="service-card">
+        <span class="icon-bg">☄</span>
+        <h3>Property Valuation</h3>
+        <p>Understand local price trends and discover what your desired listing may be worth today.</p>
+        <a href="#valuation" class="text-link">Request valuation</a>
+      </article>
+
+      <article class="service-card">
+        <span class="icon-bg">☏</span>
+        <h3>Connect with Realtors</h3>
+        <p>Schedule fast communication with professional real estate agents and shortlisted companies.</p>
+        <a href="#agents" class="text-link">Find agents</a>
+      </article>
+
+      <article class="service-card">
+        <span class="icon-bg">☼</span>
+        <h3>Saved Searches</h3>
+        <p>Reuse saved home search criteria and receive notifications when matching properties appear.</p>
+        <a href="#saved" class="text-link">Manage searches</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="agents-section" id="agents">
+    <div class="container agent-layout">
+      <div class="agent-copy">
+        <span class="eyebrow">Neighborhood Experts</span>
+        <h2>Agent and company search</h2>
+        <p>Connect with the right people for tours, negotiations, neighborhoods, and closing support.</p>
+        <div class="agent-search">
+          <input type="text" placeholder="Search agent or company" id="agentSearch" />
+          <button class="btn btn-primary" id="agentSearchButton">Search</button>
+        </div>
+        <div class="agent-results" id="agentResults">
+          <div class="agent-result-row">
+            <span class="agent-avatar">FO</span>
+            <div>
+              <h4>Fox & Oaks Realty</h4>
+              <small>Residential • Downtown</small>
+            </div>
+            <span class="agent-rating">4.9</span>
+          </div>
+          <div class="agent-result-row">
+            <span class="agent-avatar">RM</span>
+            <div>
+              <h4>Riverstone Homes</h4>
+              <small>Buy & Sell • Eastline</small>
+            </div>
+            <span class="agent-rating">4.8</span>
+          </div>
+          <div class="agent-result-row">
+            <span class="agent-avatar">AM</span>
+            <div>
+              <h4>Atlas Mortgage Group</h4>
+              <small>Finance • Home Loans</small>
+            </div>
+            <span class="agent-rating">4.7</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="valuation-card" id="valuation">
+        <div class="valuation-head">
+          <div>
+            <span class="eyebrow">Mortgage Estimate</span>
+            <h3>Loan Calculator</h3>
+          </div>
+          <span class="icon-orb">↺</span>
+        </div>
+        <div class="calculator-form">
+          <div class="calculator-row">
+            <label for="homeValue">Property Value</label>
+            <input type="text" value="450000" id="homeValue" />
+          </div>
+          <div class="calculator-row">
+            <label for="downPayment">Down Payment</label>
+            <input type="text" value="90000" id="downPayment" />
+          </div>
+          <div class="calculator-row">
+            <label for="rate">Interest Rate</label>
+            <input type="text" value="6.28" id="rate" />
+          </div>
+          <div class="calculator-row">
+            <label for="term">Term</label>
+            <select id="term">
+              <option value="30">30 Years</option>
+              <option value="15">15 Years</option>
+            </select>
+          </div>
+          <button class="btn btn-primary full" id="calculateMortgage">Calculate Monthly</button>
+          <div class="result-box">
+            <span class="small-label">Estimated Monthly</span>
+            <span class="result-value" id="monthlyOutput">$2,218</span>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="advertisements">
+    <div class="container ad-layout">
+      <div class="ad-content">
+        <span class="eyebrow">Partner Network</span>
+        <h2>Move faster with Home Finder partners</h2>
+        <div class="ad-cards">
+          <div class="ad-card">
+            <span class="ad-icon">▥</span>
+            <div>
+              <h4>Finance Hub</h4>
+              <p>Compare bank rates and approve your next home loan.</p>
+              <a href="https://www.bankrate.com" target="_blank" class="text-link">Visit Bankrate</a>
+            </div>
+          </div>
+          <div class="ad-card">
+            <span class="ad-icon">☏</span>
+            <div>
+              <h4>Home Improvement</h4>
+              <p>Plan your update, renovation, and neighborhood design.</p>
+              <a href="https://www.houzz.com" target="_blank" class="text-link">Visit Houzz</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <aside class="cta-panel">
+        <span class="eyebrow">Home Finder Alerts</span>
+        <h3>Get new homes matching your budget</h3>
+        <div class="email-row">
+          <input type="email" placeholder="Enter your email" />
+          <button class="btn btn-primary">Join</button>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="saved-searches" id="saved">
+    <div class="container saved-layout">
+      <div>
+        <span class="eyebrow">Buyer Workspace</span>
+        <h2>Saved Search Criteria</h2>
+      </div>
+      <div class="saved-list" id="savedList">
+        <div class="saved-row">
+          <span>San Jose, CA • House • $500k - 800k</span>
+          <span class="tag">Active</span>
+        </div>
+        <div class="saved-row">
+          <span>Downtown Austin • Studio • $300k</span>
+          <span class="tag muted">Saved</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="login-modal" id="loginModal">
+    <div class="modal-panel">
+      <button class="modal-close" id="closeModal">×</button>
+      <div class="modal-content">
+        <div class="modal-left">
+          <span class="eyebrow">Buyer Access</span>
+          <h2>Welcome back</h2>
+          <p>Log in to manage saved searches, schedule tours, and track your property interests.</p>
+          <div class="mini-list">
+            <div><span>✓</span> Saved search criteria</div>
+            <div><span>✓</span> Favorites & viewing requests</div>
+            <div><span>✓</span> Agent communication</div>
+          </div>
+        </div>
+        <div class="login-form-wrap">
+          <form class="login-form">
+            <div class="form-field">
+              <label for="username">Username</label>
+              <input type="text" id="username" placeholder="buyer_name" />
+            </div>
+            <div class="form-field">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="••••••••" />
+            </div>
+            <div class="form-options">
+              <label class="check-row"><input type="checkbox" /> Remember me</label>
+              <a href="#" class="text-link">Forgot password?</a>
+            </div>
+            <button type="button" class="btn btn-primary full" id="loginButton">Login</button>
+            <button type="button" class="btn btn-outline full" id="registerButton">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="#" class="brand footer-brand">
+          <span class="brand-icon">⌂</span>
+          <span class="brand-text">Home Finder</span>
+        </a>
+        <p class="footer-copy">A transparent property marketplace for homes, lands, rentals, and commercial spaces.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer-links">
+          <li><a href="#">Buy Homes</a></li>
+          <li><a href="#">Rent Apartments</a></li>
+          <li><a href="#">Commercial</a></li>
+          <li><a href="#">Land Search</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Agents</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <div class="email-row footer-email">
+          <input type="email" placeholder="Email address" />
+          <button class="btn btn-primary">Go</button>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Home Finder. All rights reserved.</span>
+      <span>Privacy · Terms · Accessibility</span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

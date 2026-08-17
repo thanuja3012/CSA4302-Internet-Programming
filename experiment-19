@@ -1,0 +1,17 @@
+# Vetcure — Farmer & Doctor Portal (Demo)
+
+This is a single-file client-side demo implementing the requested features for farmers and doctors. It is a static demo that stores data in the browser `localStorage`.
+
+Files:
+- [index.html](index.html) — main single-page application
+- [styles.css](styles.css) — styles
+- [script.js](script.js) — client logic (registration, complaints, payments, doctor actions)
+
+How to run:
+1. Open `index.html` in a browser.
+2. Register as a `farmer` or `doctor` using the Register form.
+3. Login, post complaints (farmers), respond to complaints and post news (doctors), and simulate payments.
+
+Notes:
+- This is a demo only; no backend or real payment gateways.
+- Data persists in the browser used; clear browser localStorage to reset.

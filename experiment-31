@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ko-Matha Dairy Farm | Experiment 31</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:#222;
+    background:#fafafa;
+    line-height:1.6;
+  }
+  a { text-decoration:none; color:inherit; }
+  ul { list-style:none; }
+
+  /* ---------- NAVBAR ---------- */
+  header {
+    position:sticky; top:0; z-index:100;
+    background:rgba(0,0,0,0.55);
+    backdrop-filter: blur(6px);
+  }
+  .navwrap {
+    max-width:1150px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:16px 24px;
+  }
+  .logo { color:#fff; font-size:1.4rem; font-weight:700; letter-spacing:.5px; }
+  .logo span { color:#606c38; }
+  nav ul { display:flex; gap:26px; }
+  nav a { color:#f1f1f1; font-size:.95rem; font-weight:500; transition:.25s; }
+  nav a:hover { color:#606c38; }
+  .menu-toggle { display:none; flex-direction:column; gap:5px; cursor:pointer; }
+  .menu-toggle span { width:26px; height:3px; background:#fff; border-radius:2px; }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background:linear-gradient(135deg,#f6f1e7,#e9c46a,#8d5524);
+    min-height:88vh;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    padding:120px 20px 80px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before {
+    content:"";
+    position:absolute; inset:0;
+    background:radial-gradient(circle at 20% 20%, rgba(255,255,255,.14), transparent 45%),
+               radial-gradient(circle at 80% 75%, rgba(255,255,255,.12), transparent 45%);
+  }
+  .hero-inner { position:relative; z-index:2; max-width:760px; }
+  .hero .icon { font-size:3.4rem; margin-bottom:18px; display:block; }
+  .hero h1 {
+    color:#fff; font-size:clamp(2.1rem,5vw,3.3rem); font-weight:800; margin-bottom:18px;
+    text-shadow:0 3px 18px rgba(0,0,0,.35);
+  }
+  .hero p {
+    color:#f2f2f2; font-size:1.15rem; max-width:620px; margin:0 auto 34px;
+    text-shadow:0 2px 10px rgba(0,0,0,.3);
+  }
+  .btnrow { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .btn {
+    padding:14px 30px; border-radius:30px; font-weight:600; font-size:.95rem;
+    border:2px solid transparent; cursor:pointer; transition:.25s;
+  }
+  .btn-primary { background:#606c38; color:#111; }
+  .btn-primary:hover { transform:translateY(-3px); box-shadow:0 10px 20px rgba(0,0,0,.25); }
+  .btn-outline { border-color:#fff; color:#fff; }
+  .btn-outline:hover { background:#fff; color:#111; }
+
+  /* ---------- ABOUT ---------- */
+  .about { max-width:900px; margin:70px auto; padding:0 24px; text-align:center; }
+  .eyebrow {
+    color:#bc6c25; font-weight:700; letter-spacing:2px; font-size:.8rem;
+    text-transform:uppercase; margin-bottom:10px; display:block;
+  }
+  .about h2 { font-size:2rem; margin-bottom:18px; }
+  .about p { color:#555; font-size:1.05rem; }
+
+  /* ---------- FEATURES ---------- */
+  .features { background:#fff; padding:70px 24px; border-top:1px solid #eee; border-bottom:1px solid #eee; }
+  .features h2 { text-align:center; font-size:2rem; margin-bottom:44px; }
+  .grid {
+    max-width:1150px; margin:0 auto;
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:26px;
+  }
+  .card {
+    background:#fafafa; border-radius:16px; padding:28px 24px;
+    border:1px solid #eee; transition:.25s;
+  }
+  .card:hover { transform:translateY(-6px); box-shadow:0 16px 30px rgba(0,0,0,.09); border-color:#606c38; }
+  .card .num {
+    width:40px; height:40px; border-radius:50%; background:#606c38; color:#111;
+    display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:16px;
+  }
+  .card h3 { font-size:1.1rem; margin-bottom:8px; }
+  .card p { color:#666; font-size:.94rem; }
+
+  /* ---------- CTA STRIP ---------- */
+  .cta {
+    background:linear-gradient(135deg,#f6f1e7,#e9c46a,#8d5524);
+    padding:60px 24px; text-align:center;
+  }
+  .cta h2 { color:#fff; font-size:1.8rem; margin-bottom:14px; }
+  .cta p { color:#eee; margin-bottom:26px; }
+
+  /* ---------- FOOTER ---------- */
+  footer { background:#111; color:#ccc; padding:40px 24px 22px; }
+  .footwrap {
+    max-width:1150px; margin:0 auto; display:flex; justify-content:space-between;
+    flex-wrap:wrap; gap:24px; margin-bottom:24px;
+  }
+  .footwrap h4 { color:#fff; margin-bottom:12px; }
+  .footwrap p, .footwrap a { color:#999; font-size:.9rem; display:block; margin-bottom:6px; }
+  .footwrap a:hover { color:#606c38; }
+  .copyline {
+    text-align:center; border-top:1px solid #333; padding-top:18px; font-size:.85rem; color:#777;
+  }
+
+  @media(max-width:768px){
+    nav {
+      position:absolute; top:100%; left:0; right:0; background:rgba(0,0,0,.92);
+      flex-direction:column; display:none; padding:10px 0;
+    }
+    nav.open { display:flex; }
+    nav ul { flex-direction:column; align-items:center; gap:0; }
+    nav ul li { width:100%; text-align:center; padding:12px 0; border-top:1px solid rgba(255,255,255,.08); }
+    .menu-toggle { display:flex; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="navwrap">
+    <div class="logo">🥛 Ko-Matha Dairy Farm</div>
+    <nav id="navMenu">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#features">Modules</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="menu-toggle" id="menuToggle"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<section class="hero" id="home">
+  <div class="hero-inner">
+    <span class="icon">🥛</span>
+    <h1>Ko-Matha Dairy Farm</h1>
+    <p>A1 milk. Straight from the farm.</p>
+    <div class="btnrow">
+      <button class="btn btn-primary" onclick="alert('Experiment 31 — Ko-Matha Dairy Farm: this is the demo home page. Wire this button to your login/register page.')">Get Started</button>
+      <a href="#about" class="btn btn-outline">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <span class="eyebrow">Experiment 31 · Internet Programming Lab</span>
+  <h2>About Ko-Matha Dairy Farm</h2>
+  <p>Ko-Matha Dairy Farm brings A1 cow milk, curd, cova-sweet, butter and ghee straight from the farm to the doorstep, with full transparency on sourcing and quality.</p>
+</section>
+
+<section class="features" id="features">
+  <h2>What Ko-Matha Dairy Farm Offers</h2>
+  <div class="grid">
+    <div class="card"><div class="num">1</div><h3>Fresh Products</h3><p>Milk, curd, cova-sweet, butter and ghee, priced clearly.</p></div>
+    <div class="card"><div class="num">2</div><h3>Our Farm</h3><p>Practices, technology and the story of A1 cow milk.</p></div>
+    <div class="card"><div class="num">3</div><h3>Order Online</h3><p>Schedule convenient home delivery.</p></div>
+    <div class="card"><div class="num">4</div><h3>Stock Reports</h3><p>Daily, monthly and yearly stock reporting for admins.</p></div>
+    <div class="card"><div class="num">5</div><h3>Vendor Details</h3><p>Milk vendor and cow-detail record maintenance.</p></div>
+    <div class="card"><div class="num">6</div><h3>Customer History</h3><p>Track every purchase and online order.</p></div>
+    
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to explore Ko-Matha Dairy Farm?</h2>
+  <p>Every module above is a starting point — build the pages, wire the forms, and make it yours.</p>
+  <button class="btn btn-primary" onclick="alert('Register / Login page goes here.')">Create an Account</button>
+</section>
+
+<footer id="contact">
+  <div class="footwrap">
+    <div>
+      <h4>🥛 Ko-Matha Dairy Farm</h4>
+      <p style="max-width:260px;">A1 milk. Straight from the farm.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#features">Modules</a>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:hello@ko-mathadairyfarm.com">hello@ko-mathadairyfarm.com</a>
+      <a href="tel:+911234567890">+91 12345 67890</a>
+    </div>
+  </div>
+  <div class="copyline">&copy; 2026 Ko-Matha Dairy Farm. Built for Internet Programming Lab — Experiment 31.</div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const nav = document.getElementById('navMenu');
+  toggle.addEventListener('click', () => nav.classList.toggle('open'));
+  document.querySelectorAll('nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+</script>
+</body>
+</html>

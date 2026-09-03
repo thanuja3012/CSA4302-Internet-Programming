@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>AgriMart - Online Agriculture Marketplace</title>
+
+<style>
+
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    background:#f3f8f1;
+}
+
+header{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#1b5e20;
+    padding:12px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:12px;
+    font-weight:bold;
+}
+
+section{
+    width:85%;
+    margin:20px auto;
+    background:white;
+    padding:20px;
+    border-radius:8px;
+    box-shadow:0 0 5px gray;
+}
+
+input,select,textarea{
+    width:100%;
+    padding:10px;
+    margin:8px 0;
+    box-sizing:border-box;
+}
+
+textarea{
+    height:90px;
+}
+
+button{
+    background:#2e7d32;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    margin:5px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1b5e20;
+}
+
+.products{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.product{
+    width:220px;
+    border:1px solid #ddd;
+    padding:15px;
+    border-radius:8px;
+    text-align:center;
+}
+
+.product img{
+    width:180px;
+    height:140px;
+    object-fit:cover;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table,th,td{
+    border:1px solid black;
+}
+
+th,td{
+    padding:10px;
+    text-align:center;
+}
+
+.card{
+    border:1px solid #ddd;
+    padding:15px;
+    margin:10px 0;
+    border-radius:8px;
+}
+
+footer{
+    background:#2e7d32;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<h1>🌾 AgriMart</h1>
+
+<p>Online Agricultural Products Marketplace</p>
+
+</header>
+
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#register">Register</a>
+
+<a href="#login">Login</a>
+
+<a href="#products">Products</a>
+
+<a href="#cart">Cart</a>
+
+<a href="#wallet">Wallet</a>
+
+<a href="#orders">Orders</a>
+
+<a href="#farmer">Farmer</a>
+
+</nav>
+
+
+<!-- HOME -->
+
+<section id="home">
+
+<h2>Welcome to AgriMart</h2>
+
+<p>
+AgriMart helps farmers and agricultural enthusiasts
+purchase and sell agricultural products online.
+</p>
+
+<h3>Product Categories</h3>
+
+<ul>
+
+<li>Seeds</li>
+
+<li>Fertilizers</li>
+
+<li>Pesticides</li>
+
+<li>Farming Equipment</li>
+
+<li>Farming Tools</li>
+
+<li>Irrigation Products</li>
+
+</ul>
+
+</section>
+
+
+<!-- PUBLIC REGISTRATION -->
+
+<section id="register">
+
+<h2>Public / Farmer Registration</h2>
+
+<input
+type="text"
+placeholder="Full Name"
+>
+
+<input
+type="email"
+placeholder="Email"
+>
+
+<input
+type="text"
+placeholder="Mobile Number"
+>
+
+<input
+type="password"
+placeholder="Password"
+>
+
+<select>
+
+<option>Farmer</option>
+
+<option>Public</option>
+
+</select>
+
+<button onclick="alert('Registration Successful')">
+
+Register
+
+</button>
+
+</section>
+
+
+<!-- LOGIN -->
+
+<section id="login">
+
+<h2>User Login</h2>
+
+<input
+type="text"
+placeholder="Username / Mobile Number"
+>
+
+<input
+type="password"
+placeholder="Password"
+>
+
+<button onclick="loginUser()">
+
+Login
+
+</button>
+
+<button onclick="alert('Logged Out Successfully')">
+
+Logout
+
+</button>
+
+</section>
+
+
+<!-- OTP -->
+
+<section>
+
+<h2>OTP Verification</h2>
+
+<input
+type="text"
+id="otp"
+placeholder="Enter OTP"
+>
+
+<button onclick="sendOTP()">
+
+Get OTP
+
+</button>
+
+<button onclick="verifyOTP()">
+
+Verify OTP
+
+</button>
+
+<p id="otpMessage"></p>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section id="products">
+
+<h2>Search Agricultural Products</h2>
+
+<input
+type="text"
+id="search"
+placeholder="Search product"
+>
+
+<select id="category">
+
+<option>All Categories</option>
+
+<option>Seeds</option>
+
+<option>Fertilizers</option>
+
+<option>Pesticides</option>
+
+<option>Equipment</option>
+
+<option>Tools</option>
+
+</select>
+
+<button onclick="searchProduct()">
+
+Search
+
+</button>
+
+<p id="searchResult"></p>
+
+
+<h2>Available Products</h2>
+
+<div class="products">
+
+
+<div class="product">
+
+<img
+src="https://via.placeholder.com/180"
+alt="Rice Seeds"
+>
+
+<h3>Rice Seeds</h3>
+
+<p>High quality hybrid rice seeds</p>
+
+<p><b>₹500</b></p>
+
+<p>Seeds</p>
+
+<button onclick="addCart('Rice Seeds',500)">
+
+Add to Cart
+
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img
+src="https://via.placeholder.com/180"
+alt="Fertilizer"
+>
+
+<h3>Organic Fertilizer</h3>
+
+<p>Natural fertilizer for crops</p>
+
+<p><b>₹800</b></p>
+
+<p>Fertilizers</p>
+
+<button onclick="addCart('Organic Fertilizer',800)">
+
+Add to Cart
+
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img
+src="https://via.placeholder.com/180"
+alt="Pesticide"
+>
+
+<h3>Crop Pesticide</h3>
+
+<p>Effective crop protection pesticide</p>
+
+<p><b>₹650</b></p>
+
+<p>Pesticides</p>
+
+<button onclick="addCart('Crop Pesticide',650)">
+
+Add to Cart
+
+</button>
+
+</div>
+
+
+<div class="product">
+
+<img
+src="https://via.placeholder.com/180"
+alt="Farming Tool"
+>
+
+<h3>Farming Tool</h3>
+
+<p>Strong agricultural hand tool</p>
+
+<p><b>₹300</b></p>
+
+<p>Tools</p>
+
+<button onclick="addCart('Farming Tool',300)">
+
+Add to Cart
+
+</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- PRODUCT DETAILS -->
+
+<section>
+
+<h2>Product Details</h2>
+
+<h3>Rice Seeds</h3>
+
+<p>
+High-quality hybrid rice seeds suitable for different
+agricultural conditions.
+</p>
+
+<p><b>Price:</b> ₹500</p>
+
+<p><b>Category:</b> Seeds</p>
+
+<p><b>Availability:</b> Available</p>
+
+<button onclick="alert('Product Details Opened')">
+
+View Details
+
+</button>
+
+</section>
+
+
+<!-- CART -->
+
+<section id="cart">
+
+<h2>My Shopping Cart</h2>
+
+<table id="cartTable">
+
+<tr>
+
+<th>Product</th>
+
+<th>Price</th>
+
+<th>Quantity</th>
+
+<th>Action</th>
+
+</tr>
+
+</table>
+
+<h3 id="total">
+
+Total: ₹0
+
+</h3>
+
+<button onclick="checkout()">
+
+Order Product
+
+</button>
+
+</section>
+
+
+<!-- SHIPPING ADDRESS -->
+
+<section>
+
+<h2>Shipping Address</h2>
+
+<input
+type="text"
+placeholder="Name"
+>
+
+<input
+type="text"
+placeholder="House / Street"
+>
+
+<input
+type="text"
+placeholder="City"
+>
+
+<input
+type="text"
+placeholder="State"
+>
+
+<input
+type="text"
+placeholder="PIN Code"
+>
+
+<button onclick="alert('Shipping Address Saved')">
+
+Save Address
+
+</button>
+
+<button onclick="alert('Shipping Address Updated')">
+
+Edit Address
+
+</button>
+
+</section>
+
+
+<!-- WALLET -->
+
+<section id="wallet">
+
+<h2>My Wallet</h2>
+
+<h3 id="walletBalance">
+
+Wallet Balance: ₹2000
+
+</h3>
+
+<input
+type="number"
+id="money"
+placeholder="Enter Amount"
+>
+
+<button onclick="addMoney()">
+
+Add Money
+
+</button>
+
+<button onclick="alert('Wallet Balance Checked')">
+
+Check Balance
+
+</button>
+
+</section>
+
+
+<!-- ORDERS -->
+
+<section id="orders">
+
+<h2>My Orders</h2>
+
+<table>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Product</th>
+
+<th>Amount</th>
+
+<th>Order Status</th>
+
+<th>Shipping Status</th>
+
+</tr>
+
+<tr>
+
+<td>AG1001</td>
+
+<td>Rice Seeds</td>
+
+<td>₹500</td>
+
+<td>Confirmed</td>
+
+<td>Shipped</td>
+
+</tr>
+
+<tr>
+
+<td>AG1002</td>
+
+<td>Organic Fertilizer</td>
+
+<td>₹800</td>
+
+<td>Confirmed</td>
+
+<td>Delivered</td>
+
+</tr>
+
+</table>
+
+
+<h3>View Shipping Status</h3>
+
+<input
+type="text"
+placeholder="Enter Order ID"
+>
+
+<button onclick="alert('Order is currently Shipped')">
+
+Check Shipping Status
+
+</button>
+
+</section>
+
+
+<!-- MY ACCOUNT -->
+
+<section>
+
+<h2>My Account</h2>
+
+<p><b>Name:</b> Farmer User</p>
+
+<p><b>Email:</b> farmer@gmail.com</p>
+
+<p><b>Mobile:</b> 9876543210</p>
+
+<button onclick="alert('Account Details Updated')">
+
+Update Account
+
+</button>
+
+</section>
+
+
+<!-- FARMER -->
+
+<section id="farmer">
+
+<h2>Farmer Dashboard</h2>
+
+
+<h3>Farmer Login</h3>
+
+<input
+type="text"
+placeholder="Farmer Username"
+>
+
+<input
+type="password"
+placeholder="Password"
+>
+
+<button onclick="alert('Farmer Login Successful')">
+
+Login
+
+</button>
+
+
+<h2>Add Product</h2>
+
+<input
+type="text"
+placeholder="Product Name"
+>
+
+<select>
+
+<option>Seeds</option>
+
+<option>Fertilizers</option>
+
+<option>Pesticides</option>
+
+<option>Equipment</option>
+
+<option>Tools</option>
+
+</select>
+
+<textarea
+placeholder="Product Description"
+></textarea>
+
+<input
+type="number"
+placeholder="Price"
+>
+
+<input type="file">
+
+<button onclick="alert('Product Added Successfully')">
+
+Add Product
+
+</button>
+
+
+<h2>Update / Delete Product</h2>
+
+<input
+type="text"
+placeholder="Product Name"
+>
+
+<button onclick="alert('Product Updated Successfully')">
+
+Update Product
+
+</button>
+
+<button onclick="alert('Product Deleted Successfully')">
+
+Delete Product
+
+</button>
+
+
+<h2>Upload Product Image</h2>
+
+<input type="file">
+
+<button onclick="alert('Product Image Uploaded')">
+
+Upload Image
+
+</button>
+
+
+<h2>My Sales</h2>
+
+<table>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Product</th>
+
+<th>Buyer</th>
+
+<th>Amount</th>
+
+</tr>
+
+<tr>
+
+<td>SALE1001</td>
+
+<td>Rice Seeds</td>
+
+<td>Ravi</td>
+
+<td>₹500</td>
+
+</tr>
+
+<tr>
+
+<td>SALE1002</td>
+
+<td>Organic Fertilizer</td>
+
+<td>Priya</td>
+
+<td>₹800</td>
+
+</tr>
+
+</table>
+
+
+<h2>Manage Orders</h2>
+
+<table>
+
+<tr>
+
+<th>Order ID</th>
+
+<th>Product</th>
+
+<th>Status</th>
+
+</tr>
+
+<tr>
+
+<td>AG1001</td>
+
+<td>Rice Seeds</td>
+
+<td>Confirmed</td>
+
+</tr>
+
+<tr>
+
+<td>AG1002</td>
+
+<td>Fertilizer</td>
+
+<td>Processing</td>
+
+</tr>
+
+</table>
+
+
+<h2>Update Order Status</h2>
+
+<input
+type="text"
+placeholder="Order ID"
+>
+
+<select>
+
+<option>Confirmed</option>
+
+<option>Processing</option>
+
+<option>Shipped</option>
+
+<option>Delivered</option>
+
+<option>Cancelled</option>
+
+</select>
+
+<button onclick="alert('Order Status Updated')">
+
+Update Status
+
+</button>
+
+
+<h2>Update Shipping Status</h2>
+
+<input
+type="text"
+placeholder="Order ID"
+>
+
+<select>
+
+<option>Preparing</option>
+
+<option>Shipped</option>
+
+<option>Out for Delivery</option>
+
+<option>Delivered</option>
+
+</select>
+
+<button onclick="alert('Shipping Status Updated')">
+
+Update Shipping
+
+</button>
+
+
+<button onclick="alert('Farmer Logged Out')">
+
+Logout
+
+</button>
+
+</section>
+
+
+<!-- CUSTOMER SUPPORT -->
+
+<section>
+
+<h2>Customer Support</h2>
+
+<textarea
+placeholder="Enter your product inquiry or order issue"
+></textarea>
+
+<button onclick="alert('Support Request Submitted')">
+
+Contact Support
+
+</button>
+
+</section>
+
+
+<footer>
+
+<p>
+© 2026 AgriMart - Online Agriculture Marketplace
+</p>
+
+</footer>
+
+
+<script>
+
+
+let cart=[];
+
+let balance=2000;
+
+let otpCode="123456";
+
+
+function loginUser(){
+
+alert(
+"Login Successful\n"+
+"OTP verification required."
+);
+
+}
+
+
+function sendOTP(){
+
+document.getElementById("otpMessage").innerHTML=
+"Demo OTP sent: <b>123456</b>";
+
+}
+
+
+function verifyOTP(){
+
+let otp=
+document.getElementById("otp").value;
+
+if(otp==otpCode){
+
+document.getElementById("otpMessage").innerHTML=
+"<b>OTP Verified Successfully</b>";
+
+}
+
+else{
+
+document.getElementById("otpMessage").innerHTML=
+"<b>Invalid OTP</b>";
+
+}
+
+}
+
+
+function searchProduct(){
+
+let value=
+document.getElementById("search").value.toLowerCase();
+
+if(value.includes("rice")){
+
+document.getElementById("searchResult").innerHTML=
+"<b>Product Found:</b> Rice Seeds - ₹500";
+
+}
+
+else if(value.includes("fertilizer")){
+
+document.getElementById("searchResult").innerHTML=
+"<b>Product Found:</b> Organic Fertilizer - ₹800";
+
+}
+
+else if(value.includes("pesticide")){
+
+document.getElementById("searchResult").innerHTML=
+"<b>Product Found:</b> Crop Pesticide - ₹650";
+
+}
+
+else{
+
+document.getElementById("searchResult").innerHTML=
+"<b>No Product Found</b>";
+
+}
+
+}
+
+
+function addCart(name,price){
+
+cart.push({
+name:name,
+price:price
+});
+
+displayCart();
+
+alert(name+" added to cart");
+
+}
+
+
+function displayCart(){
+
+let table=
+document.getElementById("cartTable");
+
+table.innerHTML=
+`
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>Action</th>
+</tr>
+`;
+
+let total=0;
+
+cart.forEach((item,index)=>{
+
+total+=item.price;
+
+table.innerHTML+=
+`
+<tr>
+<td>${item.name}</td>
+<td>₹${item.price}</td>
+<td>1</td>
+<td>
+<button onclick="deleteCart(${index})">
+Delete
+</button>
+</td>
+</tr>
+`;
+
+});
+
+document.getElementById("total").innerHTML=
+"Total: ₹"+total;
+
+}
+
+
+function deleteCart(index){
+
+cart.splice(index,1);
+
+displayCart();
+
+}
+
+
+function checkout(){
+
+if(cart.length==0){
+
+alert("Cart is empty");
+
+return;
+
+}
+
+let total=0;
+
+cart.forEach(item=>{
+total+=item.price;
+});
+
+if(balance>=total){
+
+balance-=total;
+
+document.getElementById("walletBalance").innerHTML=
+"Wallet Balance: ₹"+balance;
+
+alert(
+"Order Placed Successfully\n"+
+"Amount Paid: ₹"+total
+);
+
+cart=[];
+
+displayCart();
+
+}
+
+else{
+
+alert("Insufficient wallet balance");
+
+}
+
+}
+
+
+function addMoney(){
+
+let amount=
+Number(document.getElementById("money").value);
+
+if(amount>0){
+
+balance+=amount;
+
+document.getElementById("walletBalance").innerHTML=
+"Wallet Balance: ₹"+balance;
+
+alert("Money Added Successfully");
+
+}
+
+else{
+
+alert("Enter a valid amount");
+
+}
+
+}
+
+</script>
+
+
+</body>
+
+</html>
